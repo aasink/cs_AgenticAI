@@ -1,0 +1,9 @@
+Llama 3.2-1B Runtimes w/ 2 Subjects
+-----------------------------------
+
+GPU - no Quantization      : 7.12s user 2.45s system 52% cpu 18.307 total
+GPU - 4 bit Quantization   : -
+GPU - 8 bit Quantization   : -
+
+CPU - no Quantization      : 57.07s user 14.34s system 194% cpu 36.782 total
+CPU - 4 bit Quantization   : 12.50s user 5.03s system 15% cpu 1:56.74 total

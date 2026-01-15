@@ -27,6 +27,7 @@ from datetime import datetime
 import sys
 import platform
 import argparse
+import re
 
 # ============================================================================
 # CONFIGURATION - Modify these settings
@@ -465,11 +466,18 @@ def main():
     print(f"Overall Accuracy: {overall_accuracy:.2f}%")
     print(f"Duration: {duration/60:.1f} minutes")
     print("="*70)
+
+    def outputModelName(model_name):
+        outModelName = model_name.split("/")[-1]
+        outModelName = re.sub(r"-[^-]+$", "", outModelName)
+        outModelName = outModelName.replace("-", "_")
+        outModelName = outModelName.lower()
+        return outModelName
     
     # Save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     quant_suffix = f"_{QUANTIZATION_BITS}bit" if QUANTIZATION_BITS else "_full"
-    output_file = f"llama_3.2_1b_mmlu_results{quant_suffix}_{timestamp}.json"
+    output_file = f"{outputModelName(MODEL_NAME)}_mmlu_results{quant_suffix}_{timestamp}.json"
     
     output_data = {
         "model": MODEL_NAME,

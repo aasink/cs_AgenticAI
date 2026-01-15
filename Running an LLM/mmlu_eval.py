@@ -26,10 +26,20 @@ import os
 from datetime import datetime
 import sys
 import platform
+import argparse
 
 # ============================================================================
 # CONFIGURATION - Modify these settings
 # ============================================================================
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="mmluEval")
+
+    parser.add_argument("--model", type=str, default="meta-llama/Llama-3.2-1B-Instruct")
+    parser.add_argument("--gpu", action="store_true")
+    parser.add_argument("--quant", type=int, choices=[0,4,8], default=0)
+    
+    return parser.parse_args()
 
 MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct" 
 #MODEL_NAME = "allenai/OLMo-2-0425-1B-RLVR1"
@@ -58,6 +68,12 @@ MAX_NEW_TOKENS = 1
 
 QUANTIZATION_BITS = 4  # Change to 4 or 8 to enable quantization
 
+args = parse_args()
+MODEL_NAME = args.model
+USE_GPU = args.gpu
+QUANTIZATION_BITS = None if args.quant == 0 else args.quant
+
+
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
     # "abstract_algebra", "anatomy", 
@@ -81,7 +97,6 @@ MMLU_SUBJECTS = [
     # "public_relations", "security_studies", "sociology", "us_foreign_policy",
     # "virology", "world_religions"
 ]
-
 
 def detect_device():
     """Detect the best available device (CUDA, MPS, or CPU)"""

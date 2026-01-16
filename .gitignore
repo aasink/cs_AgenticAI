@@ -2,4 +2,4 @@
 *.env
 .env.local
 .DS_Store
-"/Running an LLM/*.json"
+/Running an LLM/*.json

@@ -28,6 +28,7 @@ import sys
 import platform
 import argparse
 import re
+import time
 
 # ============================================================================
 # CONFIGURATION - Modify these settings
@@ -39,6 +40,7 @@ def parse_args():
     parser.add_argument("--model", type=str, default="meta-llama/Llama-3.2-1B-Instruct")
     parser.add_argument("--gpu", action="store_true")
     parser.add_argument("--quant", type=int, choices=[0,4,8], default=0)
+    parser.add_argument("--print-results", action="store_true")
     
     return parser.parse_args()
 
@@ -51,6 +53,8 @@ MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
 USE_GPU = False  # Set to False to force CPU-only execution
+
+PRINT_RESULTS = False
 
 MAX_NEW_TOKENS = 1
 
@@ -73,15 +77,16 @@ args = parse_args()
 MODEL_NAME = args.model
 USE_GPU = args.gpu
 QUANTIZATION_BITS = None if args.quant == 0 else args.quant
+PRINT_RESULTS = args.print_results
 
 
 # For quick testing, you can reduce this list
 MMLU_SUBJECTS = [
-    # "abstract_algebra", "anatomy", 
+     "abstract_algebra", "anatomy", 
     "astronomy", "business_ethics",
     # "clinical_knowledge", "college_biology", "college_chemistry",
-    # "college_computer_science", "college_mathematics", "college_medicine",
-    # "college_physics", "computer_security", "conceptual_physics",
+     "college_computer_science", "college_mathematics", "college_medicine",
+     "college_physics", "computer_security", "conceptual_physics",
     # "econometrics", "electrical_engineering", "elementary_mathematics",
     # "formal_logic", "global_facts", "high_school_biology",
     # "high_school_chemistry", "high_school_computer_science",
@@ -405,6 +410,9 @@ def evaluate_subject(model, tokenizer, subject):
         if predicted_answer == correct_answer:
             correct += 1
         total += 1
+
+        if PRINT_RESULTS:
+            tqdm.write(f"Question {total}:\t{question}\nModel answer:\t{predicted_answer}\nModel Correct?:\t{predicted_answer == correct_answer}\n")
     
     accuracy = (correct / total * 100) if total > 0 else 0
     print(f"✓ Result: {correct}/{total} correct = {accuracy:.2f}%")
@@ -438,7 +446,11 @@ def main():
     print(f"Starting evaluation on {len(MMLU_SUBJECTS)} subjects")
     print(f"{'='*70}\n")
     
+    torch.mps.synchronize()
     start_time = datetime.now()
+    start_real = time.perf_counter()
+    start_cpu = time.process_time()
+
     
     for i, subject in enumerate(MMLU_SUBJECTS, 1):
         print(f"\nProgress: {i}/{len(MMLU_SUBJECTS)} subjects")
@@ -448,8 +460,16 @@ def main():
             total_correct += result["correct"]
             total_questions += result["total"]
     
+    torch.mps.synchronize()
     end_time = datetime.now()
+    end_real = time.perf_counter()
+    end_cpu = time.process_time()
     duration = (end_time - start_time).total_seconds()
+    real_time = end_real - start_real
+    cpu_time = end_cpu - start_cpu
+    gpu_time = real_time if USE_GPU == True else 0
+
+
     
     # Calculate overall accuracy
     overall_accuracy = (total_correct / total_questions * 100) if total_questions > 0 else 0
@@ -465,6 +485,10 @@ def main():
     print(f"Total Correct: {total_correct}")
     print(f"Overall Accuracy: {overall_accuracy:.2f}%")
     print(f"Duration: {duration/60:.1f} minutes")
+    print(f"Real Time: {real_time:.4f} seconds")
+    print(f"CPU Time: {cpu_time:.4f} seconds")
+    print(f"GPU Time: {gpu_time:.4f} seconds")
+
     print("="*70)
 
     def outputModelName(model_name):
@@ -485,6 +509,9 @@ def main():
         "timestamp": timestamp,
         "device": str(device),
         "duration_seconds": duration,
+        "real_time": real_time,
+        "cpu_time": cpu_time,
+        "gpu_time": gpu_time,
         "overall_accuracy": overall_accuracy,
         "total_correct": total_correct,
         "total_questions": total_questions,

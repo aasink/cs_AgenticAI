@@ -41,6 +41,7 @@ def parse_args():
     parser.add_argument("--gpu", action="store_true")
     parser.add_argument("--quant", type=int, choices=[0,4,8], default=0)
     parser.add_argument("--print-results", action="store_true")
+    parser.add_argument("--print-results-file", action="store_true")
     
     return parser.parse_args()
 
@@ -78,6 +79,7 @@ MODEL_NAME = args.model
 USE_GPU = args.gpu
 QUANTIZATION_BITS = None if args.quant == 0 else args.quant
 PRINT_RESULTS = args.print_results
+PRINT_RESULTS_FILE = args.print_results_file
 
 
 # For quick testing, you can reduce this list
@@ -382,6 +384,12 @@ def get_model_prediction(model, tokenizer, prompt):
     
     return answer
 
+def outputModelName(model_name):
+        outModelName = model_name.split("/")[-1]
+        outModelName = re.sub(r"-[^-]+$", "", outModelName)
+        outModelName = outModelName.replace("-", "_")
+        outModelName = outModelName.lower()
+        return outModelName
 
 def evaluate_subject(model, tokenizer, subject):
     """Evaluate model on a specific MMLU subject"""
@@ -413,7 +421,11 @@ def evaluate_subject(model, tokenizer, subject):
 
         if PRINT_RESULTS:
             tqdm.write(f"Question {total}:\t{question}\nModel answer:\t{predicted_answer}\nModel Correct?:\t{predicted_answer == correct_answer}\n")
-    
+
+        if PRINT_RESULTS_FILE:
+            with open(f"{outputModelName(MODEL_NAME)}_mmlu_results.txt", "a", encoding="utf-8") as f: 
+                f.write(f"Question {total}:\t{question}\nModel answer:\t{predicted_answer}\nModel Correct?:\t{predicted_answer == correct_answer}\n")
+
     accuracy = (correct / total * 100) if total > 0 else 0
     print(f"✓ Result: {correct}/{total} correct = {accuracy:.2f}%")
     
@@ -490,13 +502,6 @@ def main():
     print(f"GPU Time: {gpu_time:.4f} seconds")
 
     print("="*70)
-
-    def outputModelName(model_name):
-        outModelName = model_name.split("/")[-1]
-        outModelName = re.sub(r"-[^-]+$", "", outModelName)
-        outModelName = outModelName.replace("-", "_")
-        outModelName = outModelName.lower()
-        return outModelName
     
     # Save results
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

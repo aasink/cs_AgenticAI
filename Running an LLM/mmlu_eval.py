@@ -49,11 +49,14 @@ MODEL_NAME = "meta-llama/Llama-3.2-1B-Instruct"
 #MODEL_NAME = "allenai/OLMo-2-0425-1B-RLVR1"
 #MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
 
-
+## medium size for colab
+#MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
+#MODEL_NAME = "allenai/Olmo-3-7B-Instruct"
+#MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 # GPU settings
 # If True, will attempt to use the best available GPU (CUDA for NVIDIA, MPS for Apple Silicon)
 # If False, will always use CPU regardless of available hardware
-USE_GPU = False  # Set to False to force CPU-only execution
+USE_GPU = False  # Set to False to force CPU-only execution_
 
 PRINT_RESULTS = False
 
@@ -458,7 +461,8 @@ def main():
     print(f"Starting evaluation on {len(MMLU_SUBJECTS)} subjects")
     print(f"{'='*70}\n")
     
-    torch.mps.synchronize()
+    if device == "mps":
+        torch.mps.synchronize()
     start_time = datetime.now()
     start_real = time.perf_counter()
     start_cpu = time.process_time()
@@ -472,7 +476,8 @@ def main():
             total_correct += result["correct"]
             total_questions += result["total"]
     
-    torch.mps.synchronize()
+    if device =="mps":
+        torch.mps.synchronize()
     end_time = datetime.now()
     end_real = time.perf_counter()
     end_cpu = time.process_time()

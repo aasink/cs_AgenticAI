@@ -89,6 +89,14 @@ print("="*70)
 print("Chat started! Type 'quit' or 'exit' to end the conversation.")
 print("="*70 + "\n")
 
+def fixed_window(chat_history, max_messages=10):
+    if len(chat_history) > max_messages:
+        # Keep system + last max_messages-1
+        chat_history = [
+            chat_history[0],  # system
+            *chat_history[-(max_messages-1):]
+        ]
+
 while True:
     # ========================================================================
     # STEP 1: Get user input (PLAIN TEXT)
@@ -114,6 +122,13 @@ while True:
             "role": "user",
             "content": user_input
         })
+
+        chat_history = fixed_window(chat_history, 10)
+    else:
+        # keep chat history to be only system prompt and input
+        chat_history = [{"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": user_input}
+        ]
     
     # At this point, chat_history looks like:
     # [
@@ -193,6 +208,8 @@ while True:
             "role": "assistant",
             "content": assistant_response
         })
+
+        chat_history = fixed_window(chat_history, 10)
     
     # Now chat_history has grown again:
     # [

@@ -12,6 +12,8 @@ No classes, no fancy features - just the essentials.
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import argparse
+import os
+import pickle
 
 # ============================================================================
 # CONFIGURATION - Change these settings as needed
@@ -75,19 +77,40 @@ print(f"✓ Memory usage: ~2.5 GB (FP16)\n")
 
 chat_history = []
 
+save_file = "hist.pkl"
+def saveHist(chat_history):
+    with open(save_file, 'wb') as f:
+        pickle.dump(chat_history, f)
+
+def loadHist():
+    if os.path.exists(save_file):
+        with open(save_file, 'rb') as f:
+            return pickle.load(f)
+    return False
+
+hist = loadHist()
+
 # Add system prompt to history (this persists across the entire conversation)
-chat_history.append({
-    "role": "system",
-    "content": SYSTEM_PROMPT
-})
+if hist != False:
+    chat_history = hist
+else:
+    chat_history.append({
+        "role": "system",
+        "content": SYSTEM_PROMPT
+    })
 
 # ============================================================================
 # CHAT LOOP
 # ============================================================================
 
-print("="*70)
-print("Chat started! Type 'quit' or 'exit' to end the conversation.")
-print("="*70 + "\n")
+if hist != False:
+    print("="*70)
+    print("Chat Recovered! Type 'quit' or 'exit' to end the conversation.")
+    print("="*70 + "\n")
+else:
+    print("="*70)
+    print("Chat started! Type 'quit' or 'exit' to end the conversation.")
+    print("="*70 + "\n")
 
 def fixed_window(chat_history, max_messages=10):
     if len(chat_history) > max_messages:
@@ -96,6 +119,7 @@ def fixed_window(chat_history, max_messages=10):
             chat_history[0],  # system
             *chat_history[-(max_messages-1):]
         ]
+    return chat_history
 
 while True:
     # ========================================================================
@@ -106,6 +130,8 @@ while True:
     # Check for exit commands
     if user_input.lower() in ['quit', 'exit', 'q']:
         print("\nGoodbye!")
+        if os.path.exists(save_file):
+            os.remove(save_file)
         break
     
     # Skip empty inputs
@@ -123,7 +149,7 @@ while True:
             "content": user_input
         })
 
-        chat_history = fixed_window(chat_history, 10)
+        #chat_history = fixed_window(chat_history, 10)
     else:
         # keep chat history to be only system prompt and input
         chat_history = [{"role": "system", "content": SYSTEM_PROMPT},
@@ -210,6 +236,7 @@ while True:
         })
 
         chat_history = fixed_window(chat_history, 10)
+        saveHist(chat_history)
     
     # Now chat_history has grown again:
     # [

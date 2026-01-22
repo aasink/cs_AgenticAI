@@ -27,16 +27,52 @@ CPU - 4 bit Quantization   : real	1m25.376s   user	0m39.463s   sys	0m5.321s
 
 ### Graphs of Results (Local)
 
-![Description of Graph](graphs/graph1.png)
+![Real Time Results](graphs/g1.1.1.png)
+
+![CPU Time Results](graphs/g1.1.2.png)
+
+![GPU Time Results](graphs/g1.1.3.png)
+
+![Accuracy Results for Llama3.2-1B](graphs/g1.2.1.png)
+
+![Accuracy Results for OLMo2-045-1B](graphs/g1.2.2.png)
+
+![Accuracy Results for Qwen2.5-1.5B](graphs/g1.2.3.png)
 
 ### Answers to Questions:
 
 Can you see any patterns to the mistakes each model makes or do they appear random?  Do the all the models make mistakes on the same questions? 
+
+The mistakes that each models make seems to be random for each model, I could not see any pattern to the mistakes. All the models do not make mistakes on the same questions, the Llama model and the OLMo model did seem to make mistakes on a lot of similar questions compared to the qwen model but they all made mistakes on different questions too.
 
 ### Graphs of Results (Colab)
 
-![Description of Graph](graphs/graph1.png)
+![Real Time Results](graphs/g2.1.1.png)
+
+![CPU Time Results](graphs/g2.1.2.png)
+
+![GPU Time Results](graphs/g2.1.3.png)
+
+![Accuracy Results for Llama3.2-1B](graphs/g2.2.1.png)
+
+![Accuracy Results for OLMo2-045-1B](graphs/g2.2.2.png)
+
+![Accuracy Results for Qwen2.5-1.5B](graphs/g2.2.3.png)
+
+![Accuracy Results for Mistral-7B](graphs/g2.2.4.png)
+
+![Accuracy Results for OLMo3-7B](graphs/g2.2.5.png)
+
+![Accuracy Results for Qwen2.5-7B](graphs/g2.2.6.png)
 
 ### Answers to Questions:
 
 Can you see any patterns to the mistakes each model makes or do they appear random?  Do the all the models make mistakes on the same questions? 
+
+Similar to when I ran the models locally, the mistakes that each models make seems to be random for each model, I could not see any pattern to the mistakes. All the models do not make mistakes on the same questions, but here was a lot of overlap on the questions that they were getting wrong but there were a lot of questions that only one or two modles would get wrong but others would get right.
+
+## Answer to Question about Chat Agent History
+
+Compare how the chat agent performs on a multi-turn conversation when the history is maintained and when it is not.
+
+When the chat history is maintained, you can ask multiple questions turn by turn and the model still knows what you the subject is but when the history is turned off, the model has absolutely no idea and depending on how the prompt is you get confusion for prompts where the context would have been in the history and for prompts where there is a little context then it goes off on that tanget because that is the only context it has.

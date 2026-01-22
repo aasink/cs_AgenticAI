@@ -19,7 +19,7 @@ for model in $MODELS; do
 
             echo "Running MMLU_EVAL.PY w/ model=$model, quant=$quant gpu=$gpu"
 
-            time python mmlu_eval.py --model "$model" --quant "$quant" $( [[ "$gpu" == "gpu" ]] && echo "--gpu")
+            time python mmlu_eval.py --print-results-file --model "$model" --quant "$quant" $( [[ "$gpu" == "gpu" ]] && echo "--gpu")
         done
     done
 done

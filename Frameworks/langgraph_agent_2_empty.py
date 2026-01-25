@@ -161,8 +161,6 @@ def create_graph(llm):
 
         # Check if user wants to exit
         if user_input.lower() in ['quit', 'exit', 'q']:
-            if state.get("verbose"): 
-                print("[TRACE] User requested exit")
             print("Goodbye!")
             return {
                 "user_input": user_input,
@@ -243,7 +241,7 @@ def create_graph(llm):
             - Nothing (returns empty dict, state unchanged)
         """
         if state.get("verbose"): 
-            print("[TRACE] Entering print_response node") 
+            print("[TRACE] Entering print_response node")
 
         print("\n" + "-" * 50)
         print("LLM Response:")
@@ -277,7 +275,10 @@ def create_graph(llm):
             return END
 
         # Default: Proceed to LLM (even for empty input)
-        return "call_llm"
+        if state.get("user_input") == "":
+            return "get_user_input"
+        else:
+            return "call_llm"
 
     # =========================================================================
     # GRAPH CONSTRUCTION
@@ -300,6 +301,7 @@ def create_graph(llm):
         "get_user_input",      # Source node
         route_after_input,      # Routing function that examines state
         {
+            "get_user_input": "get_user_input",
             "call_llm": "call_llm",  # Any input -> proceed to LLM
             END: END                  # Quit command -> terminate graph
         }
@@ -317,7 +319,7 @@ def create_graph(llm):
 
     return graph
 
-def save_graph_image(graph, filename="lg_graph1.png"):
+def save_graph_image(graph, filename="lg_graph2.png"):
     """
     Generate a Mermaid diagram of the graph and save it as a PNG image.
     Uses the graph's built-in Mermaid export functionality.

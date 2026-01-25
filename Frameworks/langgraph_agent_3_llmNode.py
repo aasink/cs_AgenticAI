@@ -65,9 +65,10 @@ class AgentState(TypedDict):
     user_input: str
     should_exit: bool
     llm_response: str
+    qwen_response: str
     verbose: bool
 
-def create_llm():
+def create_llm(model_id):
     """
     Create and configure the LLM using HuggingFace's transformers library.
     Downloads llama-3.2-1B-Instruct from HuggingFace Hub and wraps it
@@ -77,7 +78,7 @@ def create_llm():
     device = get_device()
 
     # Model identifier on HuggingFace Hub
-    model_id = "meta-llama/Llama-3.2-1B-Instruct"
+    #model_id = "meta-llama/Llama-3.2-1B-Instruct"
 
     print(f"Loading model: {model_id}")
     print("This may take a moment on first run as the model is downloaded...")
@@ -114,7 +115,7 @@ def create_llm():
     print("Model loaded successfully!")
     return llm
 
-def create_graph(llm):
+def create_graph(llm1, llm2):
     """
     Create the LangGraph state graph with three separate nodes:
     1. get_user_input: Reads input from stdin
@@ -161,8 +162,6 @@ def create_graph(llm):
 
         # Check if user wants to exit
         if user_input.lower() in ['quit', 'exit', 'q']:
-            if state.get("verbose"): 
-                print("[TRACE] User requested exit")
             print("Goodbye!")
             return {
                 "user_input": user_input,
@@ -219,7 +218,7 @@ def create_graph(llm):
         print("\nProcessing your input...")
 
         # Invoke the LLM and get the response
-        response = llm.invoke(prompt)
+        response = llm1.invoke(prompt)
 
         if state.get("verbose"): 
             print("[TRACE] LLM response received")
@@ -243,7 +242,7 @@ def create_graph(llm):
             - Nothing (returns empty dict, state unchanged)
         """
         if state.get("verbose"): 
-            print("[TRACE] Entering print_response node") 
+            print("[TRACE] Entering print_response node")
 
         print("\n" + "-" * 50)
         print("LLM Response:")
@@ -277,7 +276,10 @@ def create_graph(llm):
             return END
 
         # Default: Proceed to LLM (even for empty input)
-        return "call_llm"
+        if state.get("user_input") == "":
+            return "get_user_input"
+        else:
+            return "call_llm"
 
     # =========================================================================
     # GRAPH CONSTRUCTION
@@ -300,6 +302,7 @@ def create_graph(llm):
         "get_user_input",      # Source node
         route_after_input,      # Routing function that examines state
         {
+            "get_user_input": "get_user_input",
             "call_llm": "call_llm",  # Any input -> proceed to LLM
             END: END                  # Quit command -> terminate graph
         }
@@ -317,7 +320,7 @@ def create_graph(llm):
 
     return graph
 
-def save_graph_image(graph, filename="lg_graph1.png"):
+def save_graph_image(graph, filename="lg_graph2.png"):
     """
     Generate a Mermaid diagram of the graph and save it as a PNG image.
     Uses the graph's built-in Mermaid export functionality.
@@ -352,12 +355,17 @@ def main():
     The graph only terminates when the user types 'quit', 'exit', or 'q'.
     """
     print("=" * 50)
-    print("LangGraph Simple Agent with Llama-3.2-1B-Instruct")
+    print("LangGraph Simple Agent with Llama-3.2-1B-Instruct & Qwen2.5-1.5B-Instruct")
     print("=" * 50)
     print()
 
     # Step 1: Create and configure the LLM
-    llm = create_llm()
+    model_id1 = "meta-llama/Llama-3.2-1B-Instruct"
+    model_id2 = "Qwen/Qwen2.5-1.5B-Instruct"
+    
+    llm1 = create_llm(model_id1)
+    llm2 = create_llm(model_id2)
+
 
     # Step 2: Build the LangGraph with the LLM
     print("\nCreating LangGraph...")

@@ -374,7 +374,7 @@ def create_graph(llm1, llm2):
 
     return graph
 
-def save_graph_image(graph, filename="lg_graph3.png"):
+def save_graph_image(graph, filename="lg_graph4.png"):
     """
     Generate a Mermaid diagram of the graph and save it as a PNG image.
     Uses the graph's built-in Mermaid export functionality.

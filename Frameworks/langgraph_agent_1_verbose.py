@@ -17,6 +17,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 from langchain_huggingface import HuggingFacePipeline
 from langgraph.graph import StateGraph, START, END
 from typing import TypedDict
+import os
 
 # Determine the best available device for inference
 # Priority: CUDA (NVIDIA GPU) > MPS (Apple Silicon) > CPU
@@ -323,6 +324,7 @@ def save_graph_image(graph, filename="lg_graph1.png"):
     Uses the graph's built-in Mermaid export functionality.
     """
     try:
+        filename = os.path.join("graphs", filename)
         # Get the Mermaid PNG representation of the graph
         # This requires the 'grandalf' package for rendering
         png_data = graph.get_graph(xray=True).draw_mermaid_png()

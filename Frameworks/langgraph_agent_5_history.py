@@ -69,6 +69,7 @@ class AgentState(TypedDict):
     llm_response: str
     qwen_response: str
     verbose: bool
+    messages: list
 
 def create_llm(model_id):
     """
@@ -116,6 +117,19 @@ def create_llm(model_id):
 
     print("Model loaded successfully!")
     return llm
+
+def messages_to_prompt(messages):
+    prompt = ""
+    for msg in messages:
+        if msg["role"] == "system":
+            prompt += f"System: {msg['content']}\n"
+        elif msg["role"] == "human":
+            prompt += f"Human: {msg['content']}\n"
+        elif msg["role"] == "assistant":
+            prompt += f"Assistant: {msg['content']}\n"
+    prompt += "Assistant:"
+    return prompt
+
 
 def create_graph(llm1, llm2):
     """
@@ -188,19 +202,22 @@ def create_graph(llm1, llm2):
             # Any input (including empty) - continue to LLM
             return {
                 "user_input": user_input,
-                "should_exit": False           # Signal to proceed to LLM
+                "should_exit": False,           # Signal to proceed to LLM
+                "messages": state["messages"] + [{"role": "human", "content": user_input}]
             }
 
     def llmNode(state: AgentState) -> dict:
         if state.get("verbose"): 
             print("[TRACE] Entering llmNode node") 
 
-        text = state["user_input"].lower()
+        '''text = state["user_input"].lower()   # Qwen disabled
 
         if text.startswith("hey qwen"):
             return {"model": "qwen"}
         else:
-            return {"model": "llama"}
+            return {"model": "llama"}'''
+        
+        return {"model": "llama"}
 
     # =========================================================================
     # NODE 2: call_llm
@@ -226,18 +243,30 @@ def create_graph(llm1, llm2):
         user_input = state["user_input"]
 
         # Format the prompt for the instruction-tuned model
-        prompt = f"User: {user_input}\nAssistant:"
+        #prompt = f"User: {user_input}\nAssistant:"
+        messages = state["messages"]
+        prompt = messages_to_prompt(messages)
 
         print("\nProcessing your input...")
 
         # Invoke the LLM and get the response
         response = llm1.invoke(prompt)
 
+        if isinstance(response, list): 
+            full = response[0]["generated_text"] 
+        else: 
+            full = response
+        
+        if "Assistant:" in full: 
+            response = full.split("Assistant:")[-1].strip() 
+        else: 
+            response = full.strip()
+
         if state.get("verbose"): 
             print("[TRACE] LLM response received")
 
         # Return only the field we're updating
-        return {"llm_response": response}
+        return {"llm_response": response, "messages": messages + [{"role": "assistant", "content": response}]}
     
     def call_qwen(state: AgentState) -> dict:
         """
@@ -344,7 +373,7 @@ def create_graph(llm1, llm2):
     graph_builder.add_node("get_user_input", get_user_input)
     graph_builder.add_node("llmNode", llmNode)
     graph_builder.add_node("call_llama", call_llama)
-    graph_builder.add_node("call_qwen", call_qwen)
+    #graph_builder.add_node("call_qwen", call_qwen)
     graph_builder.add_node("printNode", printNode)
     graph_builder.add_node("print_response", print_response)
 
@@ -369,12 +398,12 @@ def create_graph(llm1, llm2):
         lambda state: state["model"],
         {
             "llama": "call_llama",
-            "qwen": "call_qwen"
+            #"qwen": "call_qwen"
         }
     )
 
     graph_builder.add_edge("call_llama", "printNode")
-    graph_builder.add_edge("call_qwen", "printNode")
+    #graph_builder.add_edge("call_qwen", "printNode")
 
     # 3. call_llm -> print_response (always print after LLM responds)
     graph_builder.add_edge("printNode", "print_response")
@@ -388,7 +417,7 @@ def create_graph(llm1, llm2):
 
     return graph
 
-def save_graph_image(graph, filename="lg_graph4.png"):
+def save_graph_image(graph, filename="lg_graph5.png"):
     """
     Generate a Mermaid diagram of the graph and save it as a PNG image.
     Uses the graph's built-in Mermaid export functionality.
@@ -433,8 +462,8 @@ def main():
     model_id2 = "Qwen/Qwen2.5-1.5B-Instruct"
     
     llm1 = create_llm(model_id1)
-    llm2 = create_llm(model_id2)
-
+    #llm2 = create_llm(model_id2)
+    llm2 = None
 
     # Step 2: Build the LangGraph with the LLM
     print("\nCreating LangGraph...")
@@ -458,7 +487,8 @@ def main():
         "model": "llama",
         "llm_response": "",
         "qwen_response": "",
-        "verbose": False
+        "verbose": False,
+        "messages": []
     }
 
     # Single invocation - the graph loops internally via print_response -> get_user_input

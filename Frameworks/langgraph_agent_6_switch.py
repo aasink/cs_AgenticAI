@@ -118,17 +118,47 @@ def create_llm(model_id):
     print("Model loaded successfully!")
     return llm
 
-def messages_to_prompt(messages):
+def messages_to_prompt(messages, system_prompt=None):
     prompt = ""
+
+    if system_prompt:
+        prompt += f"System: {system_prompt}\n\n"
+
     for msg in messages:
         if msg["role"] == "system":
-            prompt += f"System: {msg['content']}\n"
+            prompt += f"System: {msg['content']}\n\n"
         elif msg["role"] == "user":
-            prompt += f"User: {msg['content']}\n"
+            prompt += f"{msg['content']}\n\n"
         elif msg["role"] == "assistant":
-            prompt += f"Assistant: {msg['content']}\n"
+            prompt += f"{msg['content']}\n\n"
     prompt += "Assistant:"
     return prompt
+
+def sys_prompt(model):
+    if model == "llama":
+        return (
+            "You are Llama. The participants in this conversation are:"
+            " Human, Llama (you), and Qwen."
+            " All messages begin with the speaker name."
+            " Use the messages as context and respond only to what the Human is asking."
+            " Respond with clear, confident opinions. Do not be neutral."
+            " Do not use disclaimers or phrases like “as an AI model.”"
+            " Do not speak for Qwen or the Human."
+            " Respond only as Llama."
+
+        )
+    elif model == "qwen":
+        return (
+            "You are Qwen. The participants in this conversation are:"
+            " Human, Llama, and Qwen (you)."
+            " All messages begin with the speaker name."
+            " Use the messages as context and respond only to what the Human is asking."
+            " Respond with strong, opinionated statements. Avoid neutrality."
+            " Do not use disclaimers or phrases like “as an AI model.”"
+            " Do not speak for Llama or the Human."
+            " Respond only as Qwen."
+        )
+
 
 
 def create_graph(llm1, llm2):
@@ -203,21 +233,20 @@ def create_graph(llm1, llm2):
             return {
                 "user_input": user_input,
                 "should_exit": False,           # Signal to proceed to LLM
-                "messages": state["messages"] + [{"role": "user", "content": user_input}]
+                "messages": state["messages"] + [{"role": "user", "content": "Human: " + user_input}]
             }
 
     def llmNode(state: AgentState) -> dict:
         if state.get("verbose"): 
             print("[TRACE] Entering llmNode node") 
 
-        '''text = state["user_input"].lower()   # Qwen disabled
+        text = state["user_input"].lower()   # Qwen disabled
 
         if text.startswith("hey qwen"):
             return {"model": "qwen"}
         else:
-            return {"model": "llama"}'''
+            return {"model": "llama"}
         
-        return {"model": "llama"}
 
     # =========================================================================
     # NODE 2: call_llm
@@ -244,24 +273,26 @@ def create_graph(llm1, llm2):
 
         # Format the prompt for the instruction-tuned model
         #prompt = f"User: {user_input}\nAssistant:"
+        system_prompt = sys_prompt("llama")
+
         messages = state["messages"]
-        prompt = messages_to_prompt(messages)
+        prompt = messages_to_prompt(messages, system_prompt)
+        if state.get("verbose"): 
+            print(f"[PROMPT]\n\n{prompt}\n\n[END PROMPT]\n\n")
 
         print("\nProcessing your input...")
 
         # Invoke the LLM and get the response
         response = llm1.invoke(prompt)
         full = response
-        #print(f"\n\nRESPONSE1\n\n  {response} \n\nEND RESPONSE1\n\n")
 
         response = full.split("Assistant:")[-1].strip() 
-        #print(f"\n\nRESPONSE2\n\n  {response} \n\nEND RESPONSE2\n\n")
 
         if state.get("verbose"): 
             print("[TRACE] LLM response received")
 
         # Return only the field we're updating
-        return {"llm_response": response, "messages": messages + [{"role": "assistant", "content": response}]}
+        return {"llm_response": response, "messages": messages + [{"role": "assistant", "content": "Llama: " + response}]}
     
     def call_qwen(state: AgentState) -> dict:
         """
@@ -278,18 +309,28 @@ def create_graph(llm1, llm2):
         user_input = state["user_input"]
 
         # Format the prompt for the instruction-tuned model
-        prompt = f"User: {user_input}\nAssistant:"
+        #prompt = f"User: {user_input}\nAssistant:"
+        system_prompt = sys_prompt("qwen")
+
+        messages = state["messages"]
+        prompt = messages_to_prompt(messages, system_prompt)
+        if state.get("verbose"): 
+            print(f"[PROMPT]\n\n{prompt}\n\n[END PROMPT]\n\n")
 
         print("\nProcessing your input...")
 
         # Invoke the LLM and get the response
         response = llm2.invoke(prompt)
+        full = response
+
+        response = full.split("Assistant:")[-1].strip() 
+
 
         if state.get("verbose"): 
             print("[TRACE] LLM response received")
 
         # Return only the field we're updating
-        return {"qwen_response": response}
+        return {"qwen_response": response, "messages": messages + [{"role": "assistant", "content": "Qwen: " + response}]}
 
 
     def printNode(state: AgentState) -> dict:
@@ -368,7 +409,7 @@ def create_graph(llm1, llm2):
     graph_builder.add_node("get_user_input", get_user_input)
     graph_builder.add_node("llmNode", llmNode)
     graph_builder.add_node("call_llama", call_llama)
-    #graph_builder.add_node("call_qwen", call_qwen)
+    graph_builder.add_node("call_qwen", call_qwen)
     graph_builder.add_node("printNode", printNode)
     graph_builder.add_node("print_response", print_response)
 
@@ -393,12 +434,12 @@ def create_graph(llm1, llm2):
         lambda state: state["model"],
         {
             "llama": "call_llama",
-            #"qwen": "call_qwen"
+            "qwen": "call_qwen"
         }
     )
 
     graph_builder.add_edge("call_llama", "printNode")
-    #graph_builder.add_edge("call_qwen", "printNode")
+    graph_builder.add_edge("call_qwen", "printNode")
 
     # 3. call_llm -> print_response (always print after LLM responds)
     graph_builder.add_edge("printNode", "print_response")
@@ -412,7 +453,7 @@ def create_graph(llm1, llm2):
 
     return graph
 
-def save_graph_image(graph, filename="lg_graph5.png"):
+def save_graph_image(graph, filename="lg_graph6.png"):
     """
     Generate a Mermaid diagram of the graph and save it as a PNG image.
     Uses the graph's built-in Mermaid export functionality.
@@ -457,8 +498,7 @@ def main():
     model_id2 = "Qwen/Qwen2.5-1.5B-Instruct"
     
     llm1 = create_llm(model_id1)
-    #llm2 = create_llm(model_id2)
-    llm2 = None
+    llm2 = create_llm(model_id2)
 
     # Step 2: Build the LangGraph with the LLM
     print("\nCreating LangGraph...")

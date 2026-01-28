@@ -1,5 +1,7 @@
 torch
 transformers
+langchain
 langchain-huggingface
+langgraph-checkpoint-sqlite
 langgraph
 grandalf

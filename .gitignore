@@ -4,3 +4,7 @@
 .DS_Store
 /Running an LLM/*.json
 /Running an LLM/*.xlsx
+/Frameworks/*.db
+/Frameworks/*.db-shm
+/Frameworks/*.db-wal
+

@@ -1,0 +1,93 @@
+Script started on Thu Jan 29 11:47:15 2026
+Restored session: Thu Jan 29 11:45:58 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(base) nup@Anups-MacBook-Pro frameworks % [K[?2004hcconda activate csAAI[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hppython langgraph_agent_3_llmNode.py[?2004l
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct & Qwen2.5-1.5B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+Using MPS (Apple Silicon) for inference
+Loading model: Qwen/Qwen2.5-1.5B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph3.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> explain atkinson cycle engines
+
+Processing your input...
+
+Processing your input...
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+User: explain atkinson cycle engines
+Assistant: The Atkinson cycle is a type of internal combustion engine cycle that is commonly used in small engines, such as those found in lawn mowers, leaf blowers, and other portable power tools. Here's a brief overview of how it works:
+
+**Overview of the Atkinson Cycle:**
+
+The Atkinson cycle is a type of Otto cycle, but it has a more efficient design that allows it to run at a lower compression ratio. The Atkinson cycle consists of four stages: intake, compression, power, and exhaust.
+
+**Stage 1: Intake**
+
+In this stage, the piston moves downward, creating a vacuum in the cylinder. Air and fuel are drawn into the cylinder through the intake valve, and the piston continues to move downward, creating a negative pressure in the cylinder.
+
+**Stage 2: Compression**
+
+As the piston reaches the bottom of the cylinder, it compresses the air-fuel mixture to a high pressure, typically around 10-12 bar. The compression ratio is typically around 8-10:1.
+
+**Stage 3: Power**
+
+When the spark plug ignites the compressed air-fuel mixture, a small explosion occurs, which generates a small amount of power. This power is then transmitted to the crankshaft, which converts the up
+
+--------------------------------------------------
+Qwen Response:
+--------------------------------------------------
+User: explain atkinson cycle engines
+Assistant: The Atkinson Cycle Engine is a type of internal combustion engine designed to improve fuel efficiency and reduce emissions. It was developed by British engineer James Watt in the 19th century, though it wasn't widely used until later.
+
+Here are some key points about the Atkinson Cycle Engine:
+
+1. Compression ratio:
+- The traditional Otto or diesel cycle typically have compression ratios ranging from around 8:1 for gasoline engines to over 20:1 for high-performance diesels.
+- In the Atkinson cycle, the compression ratio is reduced to around 7.5:1, which lowers its thermal efficiency but improves overall efficiency.
+
+2. Improving efficiency:
+- By compressing air more fully before ignition, the engine can achieve higher exhaust temperatures without reaching the peak temperatures typical in conventional engines.
+- This allows for better thermodynamic performance, resulting in lower fuel consumption and improved economy compared to standard designs.
+
+3. Emissions benefits:
+- The reduction in maximum temperature leads to less NOx (nitrogen oxides) formation during operation.
+- Improved compression also reduces heat loss through the cylinder walls, potentially leading to further reductions in emissions.
+
+4. Applications:
+- Initially intended for industrial use due to its complexity and cost, modern versions are now being applied to various vehicles
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> exit
+Goodbye!
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Jan 29 11:49:33 2026

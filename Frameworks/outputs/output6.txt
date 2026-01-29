@@ -1,0 +1,73 @@
+Script started on Thu Jan 29 15:17:01 2026
+Restored session: Thu Jan 29 15:16:57 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(base) nup@Anups-MacBook-Pro frameworks % [K[?2004hcconda activate csAAI[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hppython langgraph_agent_6_switch.py[?2004l
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct & Qwen2.5-1.5B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+Using MPS (Apple Silicon) for inference
+Loading model: Qwen/Qwen2.5-1.5B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph6.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> how does blue tooth work?
+
+Processing your input...
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+Ah, the magic of Bluetooth! It's a wireless personal area network (PAN) technology that allows devices to communicate with each other over short distances, typically up to 30 feet. Bluetooth uses radio waves to transmit data between devices. When you pair two devices via Bluetooth, they establish a connection and can exchange data, such as audio or data, wirelessly. Bluetooth works on the 2.4 GHz frequency band, which is the same frequency band used by Wi-Fi routers and other wireless networks. Devices must be in close proximity to each other for a successful connection. Once connected, devices can transfer data, such as audio files or photos, wirelessly to each other. Bluetooth is commonly used in devices such as headphones, speakers, smartphones, and laptops. It's a convenient and efficient way to share files and connect devices to each other.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> int   hey w qwen can you add more details?
+
+Processing your input...
+
+--------------------------------------------------
+Qwen Response:
+--------------------------------------------------
+Great! Let me dive into more detail about Bluetooth:
+
+Bluetooth is a widely-used wireless communication standard designed for low-power, short-range connections between electronic devices. Its primary purpose is to facilitate communication between devices without requiring physical cables, making it particularly useful in environments where connecting wired options would be impractical or inconvenient.
+
+Here’s a deeper look at Bluetooth technology:
+
+1. **Frequency Band**: Bluetooth operates primarily within the ISM (Industrial, Scientific, Medical) band, specifically on 2.4 GHz, which overlaps with Wi-Fi frequencies. This overlap ensures compatibility with existing infrastructure, allowing Bluetooth to coexist with various wireless technologies.
+
+2. **Data Rates**: Bluetooth supports different data rates depending on its version:
+   - **Low Energy (BLE)**: Typically operates at speeds up to 1 Mbps.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> exit
+Goodbye!
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Jan 29 15:28:27 2026

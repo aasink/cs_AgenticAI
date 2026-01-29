@@ -1,0 +1,191 @@
+Script started on Thu Jan 29 11:44:08 2026
+Restored session: Thu Jan 29 11:43:54 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(base) nup@Anups-MacBook-Pro frameworks % [K[?2004hcconda activate csAAI[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hppython langgraph_agent_1_verbose.py[?2004l
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph1.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> verbose
+Verbose: Tracing Enabled
+[TRACE] Entering call_llm node
+
+Processing your input...
+[TRACE] LLM response received
+[TRACE] Entering print_response node
+
+--------------------------------------------------
+LLM Response:
+--------------------------------------------------
+User: 
+Assistant: 
+
+---
+
+**User's Account**
+
+**Account Type:** Individual
+
+**Username:** Snowflake
+
+**Email:** snowflake@example.com
+
+**Password:** Snowflake123
+
+**Phone Number:** 555-1234
+
+**Location:** United States
+
+**Profile Picture:** (default profile picture, a snowflake image)
+
+**About Me:**
+Hello, I'm Snowflake, a busy entrepreneur with a passion for innovative technologies. When I'm not working, I love to stay active and try new things. I'm always on the lookout for ways to improve my skills and stay ahead of the curve.
+
+**Wallet:**
+
+* 1000 USD
+* 500 USD
+* 200 USD
+
+**Favorites:**
+
+* Tech startups
+* Social media platforms
+* Online courses
+
+**Recent Interactions:**
+
+* Sent a message to Alex on LinkedIn (sent 3 hours ago)
+* Liked a post from Jane on Facebook (sent 1 hour ago)
+* Commented on a tweet from John on Twitter (sent 2 hours ago)
+
+**Tasks:**
+
+* Attend a meeting with a potential client (due tomorrow)
+* Research new technologies for a startup (due next week)
+* Write a blog post on social media (due next month)
+
+---
+
+**Assistant
+[TRACE] Entering get_user_input node
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> what is the speed of light?
+[TRACE] Entering call_llm node
+
+Processing your input...
+[TRACE] LLM response received
+[TRACE] Entering print_response node
+
+--------------------------------------------------
+LLM Response:
+--------------------------------------------------
+User: what is the speed of light?
+Assistant: The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s). This is a fundamental constant of nature, denoted by the letter c, and it has been consistently measured and confirmed through various scientific experiments and observations over the years.
+
+Would you like to know more about the speed of light or is there something else I can help you with?
+[TRACE] Entering get_user_input node
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> quiet
+Quiet: Tracing Disabled
+
+Processing your input...
+
+--------------------------------------------------
+LLM Response:
+--------------------------------------------------
+User: 
+Assistant: 
+
+Welcome to the User Portal! This is where you can manage your account, view your data, and perform various tasks.
+
+To get started, you will need to create a password for your account. Please follow these steps:
+
+1. Click on the "Create Password" button at the top right corner of the page.
+2. Enter your current password in the "Current Password" field.
+3. Enter a new password in the "New Password" field.
+4. Re-enter your new password in the "Confirm Password" field.
+5. Click on the "Create Password" button to save your new password.
+
+Once you've created your password, you can proceed to the next step.
+
+Please enter your current password in the "Current Password" field:
+
+Current Password: _______________________
+
+Please enter a new password in the "New Password" field:
+
+New Password: _______________________
+
+Please re-enter your new password in the "Confirm Password" field:
+
+Confirm Password: _______________________
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> how do planes fly?
+
+Processing your input...
+
+--------------------------------------------------
+LLM Response:
+--------------------------------------------------
+User: how do planes fly?
+Assistant: How planes fly is a fascinating topic, and I'd be happy to explain it in simple terms.
+
+Planes fly by using the principles of aerodynamics, which is the study of how air flows around and over an object. Here's a step-by-step explanation:
+
+**The Four Forces of Flight**
+
+For a plane to fly, it must balance four forces:
+
+1. **Lift**: The upward force that opposes the weight of the plane and keeps it flying. Lift is created by the wing, which is shaped in such a way that air flows over and under it, generating an upward force.
+2. **Weight**: The downward force that pulls the plane towards the ground. Weight is the combined weight of the plane, passengers, cargo, and fuel.
+3. **Thrust**: The forward force that propels the plane through the air. Thrust is generated by the plane's engines, which produce a stream of high-speed air that exits the back of the plane.
+4. **Drag**: The backward force that slows down the plane. Drag is created by air resistance, which opposes the motion of the plane.
+
+**The Wing**
+
+The wing is the key component that creates lift. Here's how it works:
+
+* Air flows over and under the curved surface of the
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> exit
+Goodbye!
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Jan 29 11:45:58 2026

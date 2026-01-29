@@ -1,0 +1,100 @@
+Script started on Thu Jan 29 11:50:08 2026
+Restored session: Thu Jan 29 11:49:33 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                
+ 
+]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks
+[0m[27m[24m[J(base) nup@Anups-MacBook-Pro frameworks % [K[?2004hcconda activate csAAI[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                
+ 
+]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks
+[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hppython langgraph_agent_4_LorQ.py[?2004l
+
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct & Qwen2.5-1.5B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+Using MPS (Apple Silicon) for inference
+Loading model: Qwen/Qwen2.5-1.5B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph4.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> what are the benefits and drawbacks of CVTs?
+
+Processing your input...
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+User: what are the benefits and drawbacks of CVTs?
+Assistant: CVTs (Continuously Variable Transmissions) have been a staple in many modern vehicles for decades. Here are some of the benefits and drawbacks of CVTs:
+
+**Benefits:**
+
+1. **Improved fuel efficiency**: CVTs are known for their ability to provide smooth and seamless acceleration, which can lead to improved fuel efficiency. This is because they don't have to work as hard to accelerate, which means they use less fuel.
+2. **Reduced emissions**: CVTs are generally more environmentally friendly than traditional automatic transmissions, as they produce fewer emissions.
+3. **Smooth and quiet ride**: CVTs are often described as having a smooth and quiet ride, which can be beneficial for passengers and pedestrians.
+4. **Easy to use**: CVTs are relatively easy to drive, as they use a continuously variable gear system that can adjust to changing road conditions.
+
+**Drawbacks:**
+
+1. **Limited torque**: CVTs are designed to provide smooth acceleration, but they can struggle with steep hills or heavy loads. This can result in reduced torque output, which can lead to a less responsive driving experience.
+2. **Vibrations**: CVTs can be prone to vibrations, especially when driving on bumpy roads or in heavy traffic. This can be uncomfortable for passengers and can
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> hey Qwen how do CVTs work?
+
+Processing your input...
+
+--------------------------------------------------
+Qwen Response:
+--------------------------------------------------
+User: hey Qwen how do CVTs work?
+Assistant: CVTs, or Continuously Variable Transmissions (CVT), are a type of automatic transmission that allows for an infinite number of gear ratios. This is achieved through a belt or chain drive system with multiple pulleys arranged in a series.
+
+The basic idea behind a CVT is to use a flexible belt or chain wrapped around two pulleys, one smaller and one larger, rather than fixed gears as in traditional transmissions. The size difference between the two pulleys can be adjusted continuously by rotating them at different speeds.
+
+As the driver shifts the transmission from one gear position to another, both pulleys rotate at slightly different speeds, causing the belt or chain to stretch or compress accordingly. This stretching/compressing action changes the effective diameter of the pulley system, thereby altering the ratio between their radii and effectively changing the gear ratio.
+
+By using this design, CVTs provide a smooth transition between different gear levels, allowing for continuous acceleration and deceleration without abrupt changes in speed. They are commonly found in vehicles where smooth shifting is desired but not necessary to reach high top speeds, such as in passenger cars or light trucks.
+
+Some key features of CVTs include:
+
+1. **Infinite Gears**: Unlike conventional manual or automatic transmissions which have only a limited range of
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> exit
+Goodbye!
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                
+ 
+]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks
+[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004heexit[?2004l
+
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Jan 29 11:51:30 2026

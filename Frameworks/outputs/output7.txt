@@ -1,0 +1,140 @@
+Script started on Thu Jan 29 14:41:55 2026
+Restored session: Thu Jan 29 14:41:46 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                
+ 
+]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks
+[0m[27m[24m[J(base) nup@Anups-MacBook-Pro frameworks % [K[?2004hcconda activate csAAI[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                
+ 
+]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks
+[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hppython langgraph_agent_7_recovery.py[?2004l
+
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct & Qwen2.5-1.5B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+Using MPS (Apple Silicon) for inference
+Loading model: Qwen/Qwen2.5-1.5B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph7.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> how do computer mouses work?
+
+Processing your input...
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+Ah, the humble mouse! It's quite simple, really. The computer mouse uses a series of mechanical components to detect movement and translate it into a visual representation on the screen. The basic components include the:
+
+1. **Dome**: A small, flat piece of plastic that houses the sensor.
+2. **Sensor**: A light-emitting diode (LED) that shines a beam of light onto a surface, creating a "ghost" image.
+3. **Optical lens**: A small lens that collects the light and focuses it onto the sensor.
+4. **Microcontroller**: A tiny computer that processes the data from the sensor and sends it to the computer.
+
+The human uses a physical movement to create a "click" sound and send a signal to the computer, which translates the movement into a visual representation on the screen. It's a clever system that has revolutionized the way we interact with computers!
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> ^CTraceback (most recent call last):
+  File "/Users/nup/Documents/GradSchool/cs_AgenticAI/Frameworks/langgraph_agent_7_recovery.py", line 548, in <module>
+    main()
+  File "/Users/nup/Documents/GradSchool/cs_AgenticAI/Frameworks/langgraph_agent_7_recovery.py", line 544, in main
+    graph.invoke(initial_state, config=config)
+  File "/opt/miniconda3/envs/csAAI/lib/python3.11/site-packages/langgraph/pregel/main.py", line 3094, in invoke
+    for chunk in self.stream(
+  File "/opt/miniconda3/envs/csAAI/lib/python3.11/site-packages/langgraph/pregel/main.py", line 2679, in stream
+    for _ in runner.tick(
+  File "/opt/miniconda3/envs/csAAI/lib/python3.11/site-packages/langgraph/pregel/_runner.py", line 167, in tick
+    run_with_retry(
+  File "/opt/miniconda3/envs/csAAI/lib/python3.11/site-packages/langgraph/pregel/_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/csAAI/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 656, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/miniconda3/envs/csAAI/lib/python3.11/site-packages/langgraph/_internal/_runnable.py", line 400, in invoke
+    ret = self.func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/nup/Documents/GradSchool/cs_AgenticAI/Frameworks/langgraph_agent_7_recovery.py", line 210, in get_user_input
+    user_input = input()
+                 ^^^^^^^
+KeyboardInterrupt
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                
+ 
+]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks
+[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hpython langgraph_agent_7_recovery.py[?2004l
+
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct & Qwen2.5-1.5B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+Using MPS (Apple Silicon) for inference
+Loading model: Qwen/Qwen2.5-1.5B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph7.png
+
+🔄 RESUMING from checkpoint...
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> hey qwen who invented it?
+
+Processing your input...
+
+--------------------------------------------------
+Qwen Response:
+--------------------------------------------------
+The invention of the first computer mouse dates back to the 1960s when Douglas Engelbart developed the first computer mouse at the Stanford Research Institute. His invention was revolutionary because it allowed users to move their hands freely while interacting with a computer, making computing more intuitive and user-friendly. While other inventors like Alan Kay have also contributed to the development of mice over time, Douglas Engelbart is often credited with being one of the key pioneers in the field of interface design for computers.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> exit
+Goodbye!
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                
+ 
+]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks
+[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004heexit[?2004l
+
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Jan 29 14:43:16 2026

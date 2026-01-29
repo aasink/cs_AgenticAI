@@ -1,0 +1,71 @@
+Script started on Thu Jan 29 11:52:26 2026
+Restored session: Thu Jan 29 11:51:30 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(base) nup@Anups-MacBook-Pro frameworks % [K[?2004hcconda activate csAAI[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hppython langgraph_agent_5_history.py[?2004l
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct & Qwen2.5-1.5B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph5.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> who are the big 3 automakers?
+
+Processing your input...
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+The "Big 3" automakers are the three major American automobile manufacturers that are the largest and most well-known in the world. The Big 3 are:
+
+1. **General Motors (GM)**: Headquartered in Detroit, Michigan, GM is the largest automaker in the United States and one of the largest in the world. Founded in 1908, it has over 100,000 employees and operates a wide range of vehicles, including Chevrolet, Buick, and Cadillac.
+2. **Ford Motor Company (F)**: Based in Dearborn, Michigan, Ford is another major American automaker that has been in operation since 1903. With over 100,000 employees, it operates a diverse range of vehicles, including F-150, Explorer, and Mustang.
+3. **Stellantis (formerly Fiat Chrysler Automobiles, FCA)**: Headquartered in Auburn Hills, Michigan, Stellantis is the third and largest of the Big 3 automakers. Founded in 1925, it has over 150,000 employees and operates a range of vehicles, including Chrysler, Dodge, Jeep, and Ram trucks.
+
+These three companies have dominated the global automotive market for decades, and their influence extends beyond the automotive industry to other sectors such
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> who founded them?
+
+Processing your input...
+
+--------------------------------------------------
+Llama Response:
+--------------------------------------------------
+Here are the founding dates for the Big 3 automakers:
+
+1. **General Motors (GM)**: Founded on September 16, 1908, by William C. Durant and Charles Stewart Mott.
+2. **Ford Motor Company (F)**: Founded on June 16, 1903, by Henry Ford.
+3. **Stellantis (formerly Fiat Chrysler Automobiles, FCA)**: Founded on April 25, 1925, by the Fiat S.p.A. (now known as Stellantis) and the Chrysler Corporation (now known as Stellantis).
+
+Note that the origins of the Big 3 are a bit more complex, as the companies have undergone mergers and acquisitions over the years. However, the above dates mark the founding of each company as we know it today.
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> exit
+Goodbye!
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Jan 29 11:53:32 2026

@@ -1,0 +1,75 @@
+Script started on Thu Jan 29 11:23:29 2026
+Restored session: Thu Jan 29 11:23:14 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(base) nup@Anups-MacBook-Pro frameworks % [K[?2004hcconda activate csAAI[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004hppython langgraph_agent_2_empty.py[?2004l
+==================================================
+LangGraph Simple Agent with Llama-3.2-1B-Instruct
+==================================================
+
+Using MPS (Apple Silicon) for inference
+Loading model: meta-llama/Llama-3.2-1B-Instruct
+This may take a moment on first run as the model is downloaded...
+Device set to use mps:0
+Model loaded successfully!
+
+Creating LangGraph...
+Graph created successfully!
+
+Saving graph visualization...
+Graph image saved to graphs/lg_graph2.png
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> 
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> 
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> how do turbochargers work?
+
+Processing your input...
+
+--------------------------------------------------
+LLM Response:
+--------------------------------------------------
+User: how do turbochargers work?
+Assistant: Turbochargers are a type of forced induction device that increases the power output of an internal combustion engine. Here's a simplified explanation of how they work:
+
+**Basic Principle:**
+Turbochargers use the principle of forced induction, where the exhaust gases from the engine are compressed and then pumped back into the combustion chamber, increasing the pressure and temperature. This increased pressure and temperature can lead to a significant increase in power output.
+
+**Components:**
+
+1. **Intake Manifold:** The intake manifold is where the air and fuel mixture enters the engine.
+2. **Turbocharger:** The turbocharger is a turbine-driven device that spins when the engine speed increases.
+3. **Intercooler:** An intercooler is a cooling system that helps to cool the compressed air before it enters the engine.
+4. **Exhaust System:** The exhaust system carries the hot gases away from the engine.
+
+**How it Works:**
+
+1. **Engine Speed Increase:** When the engine speed increases, the turbocharger spins up to a high speed.
+2. **Turbine Spin:** The spinning turbine is connected to a shaft that drives an exhaust gas turbine.
+3. **Exhaust Gas Compression:** The compressed exhaust gases are then pumped back into the engine's combustion chamber
+
+==================================================
+Enter your text (or 'quit' to exit):
+==================================================
+
+> exit
+Goodbye!
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                 ]7;file://Anups-MacBook-Pro.local/Users/nup/documents/gradschool/cs_agenticAI/frameworks[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro frameworks % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Thu Jan 29 11:25:59 2026

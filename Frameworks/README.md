@@ -1,9 +1,5 @@
 # Topic 2 Frameworks Table of Contents
 
-- [Task Graph Outputs](graphs)
-
-- [Task Example Outputs](outputs)
-
 ---
 
 ## 0. Original

@@ -1,8 +1,8 @@
 # Topic 2 Frameworks Table of Contents
 
-- [Task Graph Outputs](./graphs/)
+- [Task Graph Outputs](./graphs)
 
-- [Task Example Outputs](./outputs/)
+- [Task Example Outputs](./outputs)
 
 ---
 

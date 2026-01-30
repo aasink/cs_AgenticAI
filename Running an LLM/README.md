@@ -1,4 +1,12 @@
-# Notes, Questions, & Graphs
+# Topic 1 Running and LLM Table of Contents, Notes, Questions, & Graphs
+
+- [Bash File to run just Llama Eval](./runLlamaEval.bash), [Bash File to run MMLU Eval](./runEval.bash), [Bash File to run MMLU Eval on Colab](./runEvalColab.bash)
+
+- [Runtimes (included below as well)](./runtimes.txt)
+
+- [MMLU Eval File](./mmlu_eval.py)
+
+- [Chat Agent File](./chatAgent.py)
 
 ## Runtimes for LLama 3.2B w/ 2 Subjects:
 

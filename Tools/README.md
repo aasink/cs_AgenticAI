@@ -43,3 +43,22 @@ response = client.chat.completions.create(
 
 ### Explanation of Code
 The first line in this code creates a client object for Open AI so that you can send requests to Open AI. The second line in the code creates teh chat request to Open AI with the parameters for which model it should use and  the message history as well as the max number of tokens to respond with.
+
+
+## 3. Manual Tool Handling - Calculator Tool
+
+- [Manual Tool Handling Example Outputs](./outputs/output3.txt)
+
+## 4. LangGraph Tool Handling
+
+- [LangGraph Tool Handling Example Outputs](./outputs/output4.txt)
+
+Can you create a query that uses all your tools?  Can you get seqential chaining to hit the 5 turn limit in the outer loop?  
+Yes I was able to create queries that used all my tools and was able to use all of them to hit the 5 turn limit in the outer loop, though this was difficult to do, because as I add more tool calls to the chain, the more the model grouped the tools calls per iteration.
+
+## 5. Conversations - LangGraph Nodes & Edges 
+
+
+
+## 6. Question
+Where is there an opportunity for parallelization in your agent that is not yet being taken advantage of?

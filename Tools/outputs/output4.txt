@@ -1,0 +1,216 @@
+Script started on Sun Feb  1 18:00:42 2026
+Restored session: Sun Feb  1 17:51:46 EST 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                                ]7;file://Anups-MacBook-Pro.local/Users/nup/Documents/gradschool/cs_agenticai/Tools[0m[27m[24m[J(base) nup@Anups-MacBook-Pro Tools % [K[?2004hcconda activate csAAI[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                                ]7;file://Anups-MacBook-Pro.local/Users/nup/Documents/gradschool/cs_agenticai/Tools[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro Tools % [K[?2004hppython langgraph-tool-handling.py[?2004l
+============================================================
+TEST 1: Query requiring calculator
+============================================================
+User: What's the volume of sphere with radius 3?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'operation': 'volume_sphere', 'radius': 3}
+  Result: {"result": 113.09733552923254}
+
+--- Iteration 2 ---
+Assistant: The volume of a sphere with a radius of 3 is approximately 113.10 cubic units.
+
+
+============================================================
+TEST 2: Query requiring letter count
+============================================================
+User: How may s are in the phrase: 'Mississippi riverboats'?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: count_letters
+  Args: {'text': 'Mississippi riverboats', 'letter': 's'}
+  Result: {"count": 5}
+
+--- Iteration 2 ---
+Assistant: There are 5 occurrences of the letter 's' in the phrase "Mississippi riverboats".
+
+
+============================================================
+TEST 3: Query requiring text compress
+============================================================
+User: Compress the word ‘bookkeeper'.
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: compress_text
+  Args: {'text': 'bookkeeper'}
+  Result: {"compressed": "bokeper"}
+
+--- Iteration 2 ---
+Assistant: The compressed version of the word "bookkeeper" is "bokeper".
+
+
+============================================================
+TEST 4: Query requiring text compress & count letter
+============================================================
+User: Compress 'Falling yellow leaves filled the trail.' and then count how many l are in the compressed version.
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: compress_text
+  Args: {'text': 'Falling yellow leaves filled the trail.'}
+  Result: {"compressed": "Faling yelow leaves filed the trail."}
+  Tool: count_letters
+  Args: {'text': 'Falling yellow leaves filled the trail.', 'letter': 'l'}
+  Result: {"count": 8}
+
+--- Iteration 2 ---
+Assistant: The compressed version of the text "Falling yellow leaves filled the trail." is "Faling yelow leaves filed the trail." In this compressed version, the letter 'l' occurs 8 times.
+
+
+============================================================
+TEST 5: Query requiring count letter & calculator
+============================================================
+User: Count the number of r in ‘Crimson rivers roar loudly’, then compute the sine of that number'.
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: count_letters
+  Args: {'text': 'Crimson rivers roar loudly', 'letter': 'r'}
+  Result: {"count": 5}
+  Tool: count_letters
+  Args: {'text': 'Crimson rivers roar loudly', 'letter': 'R'}
+  Result: {"count": 5}
+
+--- Iteration 2 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'operation': 'sin', 'value': 10}
+  Result: {"result": -0.5440211108893698}
+
+--- Iteration 3 ---
+Assistant: The letter 'r' appears 10 times (5 lowercase 'r's and 5 uppercase 'R's) in the phrase "Crimson rivers roar loudly." The sine of that number (10) is approximately -0.544.
+
+
+============================================================
+TEST 6: Query requiring all 3 tools
+============================================================
+User: Compress the phrase ‘Glittering lanterns illuminate quiet streets’, count the i in the compressed text, and compute the sine of that count.
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: compress_text
+  Args: {'text': 'Glittering lanterns illuminate quiet streets'}
+  Result: {"compressed": "Glitering lanterns iluminate quiet strets"}
+  Tool: count_letters
+  Args: {'text': 'Glittering lanterns illuminate quiet streets', 'letter': 'i'}
+  Result: {"count": 5}
+
+--- Iteration 2 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'operation': 'sin', 'value': 5}
+  Result: {"result": -0.9589242746631385}
+
+--- Iteration 3 ---
+Assistant: The compressed text is **"Glitering lanterns iluminate quiet strets"**. The count of the letter 'i' in this text is **5**. The sine of that count is approximately **-0.96**.
+
+
+============================================================
+TEST 7: Query requiring all 3 tools w/ multiple tool calls
+============================================================
+User: Count the l in 'Wandering spirits still drift softly along the hollow cliffs', compress the phrase, count the f in the compressed version, and compute the area of a circle whose radius is the difference between those two counts.
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: count_letters
+  Args: {'text': 'Wandering spirits still drift softly along the hollow cliffs', 'letter': 'l'}
+  Result: {"count": 7}
+  Tool: compress_text
+  Args: {'text': 'Wandering spirits still drift softly along the hollow cliffs'}
+  Result: {"compressed": "Wandering spirits stil drift softly along the holow clifs"}
+
+--- Iteration 2 ---
+LLM wants to call 1 tool(s)
+  Tool: count_letters
+  Args: {'text': 'Wandering spirits stil drift softly along the holow clifs', 'letter': 'f'}
+  Result: {"count": 3}
+
+--- Iteration 3 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'operation': 'area_circle', 'radius': 4}
+  Result: {"result": 50.26548245743669}
+
+--- Iteration 4 ---
+Assistant: The counts are as follows:
+
+- The letter 'l' in the phrase appears **7 times**.
+- The compressed version of the phrase is: "Wandering spirits stil drift softly along the holow clifs".
+- The letter 'f' in the compressed version appears **3 times**.
+
+The difference between these counts is \(7 - 3 = 4\).
+
+The area of a circle with a radius of 4 (the difference between the counts) is approximately **50.27** square units.
+
+
+============================================================
+TEST 8: Query using sequential chaining to hit 5-turn limit
+============================================================
+User: “Compress ‘balloon decorations’. Count the letter o. Take the sine of that count. Then compress ‘committee hallway’. Count the letter m. Take the sine of that count. Compare the two sine values and identify the one that is larger. Take the sine of that larger value. Finally compute the volume of a rectangular box with width equal to that final sine value, length 3, and height 2. Then take that resulting value and find the circumference, area of a circle with that as the radius. Then take the cosine of that value .Then use that value to find the volume of a sphere with that radius.
+
+--- Iteration 1 ---
+LLM wants to call 4 tool(s)
+  Tool: compress_text
+  Args: {'text': 'balloon decorations'}
+  Result: {"compressed": "balon decorations"}
+  Tool: count_letters
+  Args: {'text': 'balloon decorations', 'letter': 'o'}
+  Result: {"count": 4}
+  Tool: compress_text
+  Args: {'text': 'committee hallway'}
+  Result: {"compressed": "comite halway"}
+  Tool: count_letters
+  Args: {'text': 'committee hallway', 'letter': 'm'}
+  Result: {"count": 2}
+
+--- Iteration 2 ---
+LLM wants to call 2 tool(s)
+  Tool: calculator
+  Args: {'operation': 'sin', 'value': 4}
+  Result: {"result": -0.7568024953079283}
+  Tool: calculator
+  Args: {'operation': 'sin', 'value': 2}
+  Result: {"result": 0.9092974268256817}
+
+--- Iteration 3 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'operation': 'sin', 'value': 0.9092974268256817}
+  Result: {"result": 0.7890723435728884}
+
+--- Iteration 4 ---
+LLM wants to call 4 tool(s)
+  Tool: calculator
+  Args: {'operation': 'volume_rectangle', 'width': 0.7890723435728884, 'length': 3, 'height': 2}
+  Result: {"result": 4.73443406143733}
+  Tool: calculator
+  Args: {'operation': 'circumference_circle', 'radius': 0.7890723435728884}
+  Result: {"result": 4.957887755438935}
+  Tool: calculator
+  Args: {'operation': 'area_circle', 'radius': 0.7890723435728884}
+  Result: {"result": 1.9560660551777638}
+  Tool: calculator
+  Args: {'operation': 'cos', 'value': 0.7890723435728884}
+  Result: {"result": 0.7045039764906316}
+
+--- Iteration 5 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'operation': 'volume_sphere', 'radius': 0.7045039764906316}
+  Result: {"result": 1.4646671987435487}
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                                ]7;file://Anups-MacBook-Pro.local/Users/nup/Documents/gradschool/cs_agenticai/Tools[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro Tools % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Sun Feb  1 18:02:58 2026

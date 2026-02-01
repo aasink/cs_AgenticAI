@@ -1,0 +1,86 @@
+Script started on Sun Feb  1 12:41:56 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                            ]7;file://Anups-MacBook-Pro.local/Users/nup/Documents/gradschool/cs_agenticai/Tools[0m[27m[24m[J(base) nup@Anups-MacBook-Pro Tools % [K[?2004hcconda activate csAAI[?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                            ]7;file://Anups-MacBook-Pro.local/Users/nup/Documents/gradschool/cs_agenticai/Tools[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro Tools % [K[?2004hppython manual-tool-handling.py[?2004l
+============================================================
+TEST 1: Query requiring tool
+============================================================
+User: What's the weather like in San Francisco?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: get_weather
+  Args: {'location': 'San Francisco'}
+  Result: Sunny, 72°F
+
+--- Iteration 2 ---
+Assistant: The weather in San Francisco is sunny with a temperature of 72°F.
+
+
+============================================================
+TEST 2: Query not requiring tool
+============================================================
+User: Say hello!
+
+--- Iteration 1 ---
+Assistant: Hello! How can I assist you today?
+
+
+============================================================
+TEST 3: Multiple tool calls
+============================================================
+User: What's the weather in New York and London?
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: get_weather
+  Args: {'location': 'New York'}
+  Result: Cloudy, 55°F
+  Tool: get_weather
+  Args: {'location': 'London'}
+  Result: Rainy, 48°F
+
+--- Iteration 2 ---
+Assistant: The weather in New York is cloudy with a temperature of 55°F. In London, it is rainy with a temperature of 48°F.
+
+
+============================================================
+TEST 4: Query requiring Calculator
+============================================================
+User: What's the area of a 2 by 4 rectangle?
+
+--- Iteration 1 ---
+LLM wants to call 1 tool(s)
+  Tool: calculator
+  Args: {'operation': 'area_rectangle', 'width': 2, 'length': 4}
+  Result: {"result": 8}
+
+--- Iteration 2 ---
+Assistant: The area of a 2 by 4 rectangle is 8 square units.
+
+
+============================================================
+TEST 3: Multiple calculator calls
+============================================================
+User: What's the area and circumference of a circle with radisu 5?
+
+--- Iteration 1 ---
+LLM wants to call 2 tool(s)
+  Tool: calculator
+  Args: {'operation': 'area_circle', 'radius': 5}
+  Result: {"result": 78.53981633974483}
+  Tool: calculator
+  Args: {'operation': 'circumference_circle', 'radius': 5}
+  Result: {"result": 31.41592653589793}
+
+--- Iteration 2 ---
+Assistant: The area of the circle with a radius of 5 is approximately \( 78.54 \) square units, and the circumference is approximately \( 31.42 \) units.
+
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                                                                                            ]7;file://Anups-MacBook-Pro.local/Users/nup/Documents/gradschool/cs_agenticai/Tools[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro Tools % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...none found.
+
+Script done on Sun Feb  1 12:42:49 2026

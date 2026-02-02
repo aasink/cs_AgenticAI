@@ -47,9 +47,13 @@ The first line in this code creates a client object for Open AI so that you can 
 
 ## 3. Manual Tool Handling - Calculator Tool
 
+- [Manual Tool Handling File](./manual-tool-handling.py)
+
 - [Manual Tool Handling Example Outputs](./outputs/output3.txt)
 
 ## 4. LangGraph Tool Handling
+
+- [LangGraph Tool Handling File](./langgraph-tool-handling.py)
 
 - [LangGraph Tool Handling Example Outputs](./outputs/output4.txt)
 
@@ -58,7 +62,7 @@ Yes I was able to create queries that used all my tools and was able to use all 
 
 ## 5. Conversations - LangGraph Nodes & Edges 
 
-
+- [LangGraph Conversation File](./langgraph-conversation.py)
 
 ## 6. Question
 Where is there an opportunity for parallelization in your agent that is not yet being taken advantage of?

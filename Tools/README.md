@@ -64,5 +64,10 @@ Yes I was able to create queries that used all my tools and was able to use all 
 
 - [LangGraph Conversation File](./langgraph-conversation.py)
 
+![Task 5 Graph](./lg_graph.png)
+
+- [LangGraph Conversation Example Outputs](./outputs/output5.txt)
+
 ## 6. Question
-Where is there an opportunity for parallelization in your agent that is not yet being taken advantage of?
+Where is there an opportunity for parallelization in your agent that is not yet being taken advantage of?  
+The place where there is an opportunity for parallelization in the agent would be when the tool calls are done, when calling the tool node everytime the tools that were requested for that iteration are being run one by one instead they could be parallelized and run all at once.

@@ -227,7 +227,7 @@ if __name__ == "__main__":
     print("\n" + "="*60)
     print("TEST 5: Query requiring count letter & calculator")
     print("="*60)
-    run_agent("Count the number of r in ‘Crimson rivers roar loudly’, then compute the sine of that number'.")
+    run_agent("Count the number of r in ‘Crimson rivers roar loudly’, then compute the sine of that number.")
 
     print("\n" + "="*60)
     print("TEST 6: Query requiring all 3 tools")

@@ -8,3 +8,6 @@
 /Frameworks/*.db-shm
 /Frameworks/*.db-wal
 /Tools/*.json
+/Tools/*.db
+/Tools/*.db-shm
+/Tools/*.db-wal

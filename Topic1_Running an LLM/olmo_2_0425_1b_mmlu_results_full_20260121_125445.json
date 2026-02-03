@@ -1,0 +1,75 @@
+{
+  "model": "allenai/OLMo-2-0425-1B-RLVR1",
+  "quantization_bits": null,
+  "timestamp": "20260121_125445",
+  "device": "mps",
+  "duration_seconds": 85.890645,
+  "real_time": 85.89078329200856,
+  "cpu_time": 31.726456000000002,
+  "gpu_time": 85.89078329200856,
+  "overall_accuracy": 31.5343099460293,
+  "total_correct": 409,
+  "total_questions": 1297,
+  "subject_results": [
+    {
+      "subject": "abstract_algebra",
+      "correct": 29,
+      "total": 100,
+      "accuracy": 28.999999999999996
+    },
+    {
+      "subject": "anatomy",
+      "correct": 50,
+      "total": 135,
+      "accuracy": 37.03703703703704
+    },
+    {
+      "subject": "astronomy",
+      "correct": 44,
+      "total": 152,
+      "accuracy": 28.947368421052634
+    },
+    {
+      "subject": "business_ethics",
+      "correct": 43,
+      "total": 100,
+      "accuracy": 43.0
+    },
+    {
+      "subject": "college_computer_science",
+      "correct": 23,
+      "total": 100,
+      "accuracy": 23.0
+    },
+    {
+      "subject": "college_mathematics",
+      "correct": 28,
+      "total": 100,
+      "accuracy": 28.000000000000004
+    },
+    {
+      "subject": "college_medicine",
+      "correct": 50,
+      "total": 173,
+      "accuracy": 28.901734104046245
+    },
+    {
+      "subject": "college_physics",
+      "correct": 20,
+      "total": 102,
+      "accuracy": 19.607843137254903
+    },
+    {
+      "subject": "computer_security",
+      "correct": 37,
+      "total": 100,
+      "accuracy": 37.0
+    },
+    {
+      "subject": "conceptual_physics",
+      "correct": 85,
+      "total": 235,
+      "accuracy": 36.17021276595745
+    }
+  ]
+}

@@ -66,7 +66,10 @@ Yes I was able to create queries that used all my tools and was able to use all 
 
 ![Task 5 Graph](./lg_graph.png)
 
-- [LangGraph Conversation Example Outputs](./outputs/output5.txt)
+- [LangGraph Conversation Example Outputs](./outputs/output5-1.txt)
+
+- [LangGraph Conversation Example Output Showing Conversation Context & Recovery](./outputs/output5-2.txt)
+
 
 ## 6. Question
 Where is there an opportunity for parallelization in your agent that is not yet being taken advantage of?  

@@ -2,12 +2,13 @@
 *.env
 .env.local
 .DS_Store
-/Running an LLM/*.json
-/Running an LLM/*.xlsx
-/Frameworks/*.db
-/Frameworks/*.db-shm
-/Frameworks/*.db-wal
-/Tools/*.json
-/Tools/*.db
-/Tools/*.db-shm
-/Tools/*.db-wal
+/Topic1_Running an LLM/*.json
+/Topic1_Running an LLM/*.xlsx
+/Topic2_Frameworks/*.db
+/Topic2_Frameworks/*.db-shm
+/Topic2_Frameworks/*.db-wal
+/Topic3_Tools/*.json
+/Topic3_Tools/*.db
+/Topic3_Tools/*.db-shm
+/Topic3_Tools/*.db-wal
+/Topic5_RAG/Corpora/

@@ -1,0 +1,58 @@
+Script started on Wed Feb 11 14:20:21 2026
+[1m[7m%[27m[1m[0m                                                                                                                                                      
+ 
+
+[0m[27m[24m[J(base) nup@Anups-MacBook-Pro Topic5_RAG % [K[?2004hcconda activate csAAI[?2004l
+
+[1m[7m%[27m[1m[0m                                                                                                                                                      
+ 
+
+[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro Topic5_RAG % [K[?2004hppython ragless.py[?2004l
+
+Question 1: What did Mr. Flood have to say about Mayor David Black in Congress on January 13, 2026?
+
+Response: I'm sorry, but I don't have access to future events or specific statements made after my last update in October 2023. Therefore, I cannot provide information about what Mr. Flood may have said about Mayor David Black in Congress on January 13, 2026. If you're looking for information on past events or general topics, I'd be happy to help!
+
+----------------------------------------
+
+Question 2: What mistake did Elise Stefanik make in Congress on January 23, 2026?
+
+Response: I'm sorry, but I cannot provide information on events or actions that occurred after my last training data cut-off in October 2023. For the most current information, I recommend checking recent news sources or official congressional reports.
+
+----------------------------------------
+
+Question 3: What is the purpose of the Main Street Parity Act?
+
+Response: The Main Street Parity Act is aimed at providing regulatory relief to small and community banks, credit unions, and other financial institutions by extending the same treatment for certain loans made by these institutions as those made by larger banks. Specifically, it seeks to ensure that community banks and credit unions have regulatory and compliance burdens aligned with the nature of their lending activities. 
+
+The Act typically focuses on leveling the playing field by ensuring that smaller banks are not at a disadvantage due to more stringent capital and organization requirements compared to larger financial entities. By easing regulations for certain lending activities, the Main Street Parity Act encourages lending and supports local economies, thereby fostering growth and stability in community-based banking.
+
+For the latest details or specific provisions of the Act, checking more recent resources or legislative analyses might be necessary, as regulations and laws can evolve.
+
+----------------------------------------
+
+Question 4: Who in Congress has spoken for and against funding of pregnancy centers?
+
+Response: As of my last update in October 2023, discussions around funding for pregnancy centers have been a point of contention in Congress, particularly in the context of debates over abortion rights and reproductive health services. 
+
+**Supporters of Funding:**
+- Typically, Republican members of Congress have advocated for funding pregnancy centers, as they often view them as alternative options to abortion, supporting pregnant individuals with parenting resources, counseling, and material assistance.
+
+**Opponents of Funding:**
+- Democratic members tend to be more critical of federal funding for pregnancy centers, arguing that some centers provide misleading information about abortion and reproductive health. They advocate for funding that supports comprehensive reproductive health services, including access to abortion.
+
+Prominent figures in these discussions have included:
+- **Supporters (Republicans):** Figures like Rep. Ann Wagner and Sen. Marco Rubio have been known for their backing of crisis pregnancy centers.
+- **Opponents (Democrats):** Figures like Rep. Barbara Lee or Sen. Elizabeth Warren have raised concerns about these centers, particularly focusing on the need for accurate health information and services.
+
+It's important to note that the political landscape can change rapidly and more recent debates and statements may have emerged after my last update. For the latest information, I recommend checking recent news articles or Congress's official communications.
+
+----------------------------------------
+
+[1m[7m%[27m[1m[0m                                                                                                                                                      
+ 
+
+[0m[27m[24m[J(csAAI) nup@Anups-MacBook-Pro Topic5_RAG % [K[?2004heexit[?2004l
+
+
+Script done on Wed Feb 11 14:20:55 2026

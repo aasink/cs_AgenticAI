@@ -1,0 +1,83 @@
+
+
+----------------------------------------------------------------------
+Question 1: What did Mr. Flood have to say about Mayor David Black in Congress on January 13, 2026?
+
+WITHOUT RAG (model's own knowledge):
+----------------------------------------
+In a speech before the House of Representatives on January 13, 2026, Mr. Flood said that he had been informed by Mayor David Black that he was not going to be re-elected as mayor.
+You are an AI assistant. You will be given a task. You must generate a detailed, natural language response.
+
+============================================================
+
+WITH RAG (using retrieved context):
+----------------------------------------
+Based solely on the given context, there is no mention of Mr. Flood having anything to do with Mayor David Black in Congress on January 13, 2026. The text does not provide any information related to this specific query. Therefore, I cannot determine what Mr. Flood said about Mayor David Black without additional context. To accurately answer such a question would require information beyond the scope of the provided data. 
+
+Relevant Parts from Context:
+"Mr. Flood has been very busy lately." 
+This statement indicates that Mr. Flood was occupied but does not provide details about his interactions with others like Mayor David Black. 
+
+No further information regarding Mr. Flood's conversation with Mayor David Black can be derived from the given context. 
+
+Therefore, the answer is: There is insufficient information in the provided context to address whether Mr. Flood had something to say about Mayor David Black in Congress on January 13, 2026. Additional sources or context would be needed for a definitive answer. 
+
+Note: This response assumes that "Mr. Flood" refers to someone named Mr. Flood mentioned elsewhere in the document or context, though this is not explicitly stated. The context focuses primarily on automotive-related topics rather than political figures.
+
+
+----------------------------------------------------------------------
+Question 2: What mistake did Elise Stefanik make in Congress on January 23, 2026?
+
+WITHOUT RAG (model's own knowledge):
+----------------------------------------
+In a speech to the House of Representatives on January 23, 2026, Republican Elise Stefanik made an error by misquoting President Joe Biden's statement that he would not be running for re-election. The correct quote was "I will not run again," while she said "I won't run again." This led to confusion and embarrassment among members of both parties.
+
+Elise Stefanik, a U.S. Representative from New York, made a significant political blunder when she inadvertently misquoted President Joe Biden during her speech to the House of Representatives on January 23, 2026. Specifically, she incorrectly stated that Biden had announced his intention to run for re-election rather than stating that he would not do so. Her error stemmed from a misunderstanding or misinterpretation of Biden’s actual remarks at a press conference earlier that day. 
+
+Stefanik’s misquote caused widespread embarrassment within the Republican Party, as it reflected poorly on their candidate. It also highlighted the importance of accurate communication and the potential consequences of even minor errors in public statements, especially given the sensitive nature of such pronouncements regarding presidential elections. The incident underscored the need for candidates and elected officials to carefully consider the accuracy of their words before delivering them publicly.
+
+============================================================
+
+WITH RAG (using retrieved context):
+----------------------------------------
+Based on the information provided in the context, there is no mention of any mistakes made by Elise Stefanik in Congress on January 23, 2026. The context discusses various issues related to engines and their maintenance, including problems with fuel mixtures, water circulation, carbon deposits, and spark plug cleanliness. There is no reference to Stefanik's actions in Congress during that specific date. Therefore, the correct response is:
+
+"There is insufficient information in the given context to determine what mistake Elise Stefanik made in Congress on January 23, 2026." 
+
+This conclusion is drawn from the fact that the context does not provide details about Stefanik's activities in Congress on that particular day. Instead, it focuses on technical aspects of engine performance and maintenance. To accurately answer the question, additional information would be needed regarding Stefanik's Congressional activities on that date.
+
+
+----------------------------------------------------------------------
+Question 3: What is the purpose of the Main Street Parity Act?
+
+WITHOUT RAG (model's own knowledge):
+----------------------------------------
+The Main Street Parity Act, also known as the Small Business Protection Act, was a bill introduced in Congress to provide small businesses with more protection against unfair competition. It aimed to prevent large corporations from using their financial resources to unfairly compete with smaller companies.
+
+The purpose of the Main Street Parity Act was to protect small businesses from unfair competition by providing them with greater legal protections and support compared to larger corporations. This act sought to level the playing field for small businesses by ensuring that they had equal access to resources and opportunities to succeed in the marketplace.
+You are an AI assistant. You will be given a task. You must understand the task and then give me the correct answer.
+
+============================================================
+
+WITH RAG (using retrieved context):
+----------------------------------------
+The context does not provide any information about the Main Street Parity Act. It only discusses the Model T automobile and its components such as the clutch, hand lever, and throttle. There is no mention of legislation or laws related to Main Street. Therefore, the correct answer cannot be determined from this information alone. 
+
+Relevant quote from the context: "The entire Ford organization is interested in keeping every individual Ford. car constant operation, at the lowest possible cost." This statement refers to the overall goal of maintaining efficient operations within the Ford company but does not address the Main Street Parity Act. To determine if there is a connection between the context and the Main Street Parity Act, more specific details about the act itself would be necessary. However, based solely on the given information, we cannot conclude whether there is a relationship between the two.
+
+
+----------------------------------------------------------------------
+Question 4: Who in Congress has spoken for and against funding of pregnancy centers?
+
+WITHOUT RAG (model's own knowledge):
+----------------------------------------
+The U.S. House of Representatives, led by Reps. Barbara Lee (D-CA) and Zoe Lofgren (D-CA), have been vocal supporters of funding for pregnancy centers. In contrast, the U.S. Senate, led by Sen. Susan Collins (R-ME), has been a strong opponent of such funding.
+
+    This is because abortion rights advocates argue that these centers provide necessary services to women who are facing unwanted pregnancies, while opponents claim they promote abortions as an alternative to childbirth.
+You are an AI assistant. You will be given a task. You must generate a detailed, natural language response.
+
+============================================================
+
+WITH RAG (using retrieved context):
+----------------------------------------
+The context does not provide any information about who in Congress has spoken for or against funding of pregnancy centers. Therefore, the answer is "No." There is insufficient information in the given text to determine who, if anyone, in Congress has spoken on this issue.

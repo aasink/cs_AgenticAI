@@ -1,0 +1,25 @@
+
+
+----------------------------------------------------------------------
+Question 1: What is the CEO's favorite color?
+
+
+Answer: The context does not provide any information about the CEO's favorite color. There is no mention of colors or preferences related to the CEO in the given text. Therefore, it is impossible to determine what the CEO's favorite color is based solely on the information provided. 
+
+The closest we can get from the context is that there is a "BRIGHT" option mentioned, but this refers to an item called No.3Biue rather than being associated with the CEO's preference for a specific color. Without additional information, we cannot infer the CEO's favorite color.
+
+
+----------------------------------------------------------------------
+Question 2: What was the official horsepower rating after Ford standardized it in 1909?
+
+
+Answer: Based on the information provided in the context, there is no specific mention of the official horsepower rating after Ford standardized it in 1909. Therefore, the exact horsepower rating cannot be determined from the given text alone. 
+
+The passage discusses various aspects related to servicing Ford cars but does not provide details about the horsepower standardization or its value post-1909. For accurate historical data regarding horsepower ratings, additional sources would need to be consulted beyond the provided context.
+
+
+----------------------------------------------------------------------
+Question 3: Why does the manual warn against using the electric starter on 1915 Model Ts?
+
+
+Answer: The manual warns against using the electric starter on 1915 Model Ts because if the starter won't crank the engine, turning on the lights and attempting to start in the usual manner may not work. Additionally, if the lights go out or become quite dim, the battery is likely in poor condition and should be given a bench charge and the cause of the trouble located and removed. This suggests that the manual believes the lights could be an indicator of a failing battery, which would make the use of the electric starter dangerous.

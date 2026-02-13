@@ -65,15 +65,26 @@ Too much context hurts the response of the model when it starts adding more word
 How does k interact with chunk size?
 The k interacts with the chunk size by determining how much information is being collected from the embeddings depending on the chunk size the size of the k determines how much information the model needs in order for it to get the most information without having too much extra information.
 
-## 5. Handling Unanswerable Questions
+## 5. Handling Unanswerable Questions\
+
+- [Handling Unanswerable Questions Output](./outputs/e5_output.txt)
 
 Does the model admit it doesn't know?
+Sometimes, the first two questions that I asked which were completely off topic and related but not in the corpus, the model said that it was not in the context and tried to help find an answer from the context or recommended additional sources. However for the false premise question, it did not admit and instead made up an answer, as I had asked about using the starter on a 1915 model T and the model answered as if the 1915 model T had a starter but starters were not added until 1919.
 
 Does it hallucinate plausible-sounding but wrong answers?
+The answers that it did give wrong answers for did sound very plausible and if you didnt know better it would sound pretty accurate, since I had asked about usage of the starter on 1915 model T when the starter was only added in 1919 but the model still told me that the manual warns against using the starter in certain conditions on the 1915 model T.
 
 Does retrieved context help or hurt? (Does irrelevant context encourage hallucination?)
+I think that irrelevant context would encourage hallucination because if that context is similar to what the question is asking but would not help with the model giving a correct answer then I think that that context would basically be encouraging the model to hallucinate.
+
+Modify your prompt template to add "If the context doesn't contain the answer, say 'I cannot answer this from the available documents.'" Does this help?
+This somewhat helps, the model already did a good job of noting when it did not find the information in the context but the area it got stuck was on false premise questions and for these it kind of depends on how similar the question topic is to something in the context using the starter example, there were references to the starter but no mention of when it was introduced to the model T so it depends on whether the model would pick up that the fact that information about the specific model year is not there or it just sees the information about the starters and just uses that without realizing the model year being asked about never had that feature.
+
 
 ## 6. Query Phrasing Sensitivity
+
+- [Query Phrasing Sensitivity Output](./outputs/e6_output.txt)
 
 Which phrasings retrieve the best chunks?
 

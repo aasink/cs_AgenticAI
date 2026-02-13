@@ -1,0 +1,393 @@
+
+
+----------------------------------------------------------------------
+Question Style Formal:
+What maintenance is recommended for the magneto to ensure reliable ignition?
+
+============================================================
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Source: ModelTNew.txt, Relevance: 0.566]
+gnition system, inspect the magneto contact post. While someone
+  cranks the car, short the magneto contact post, point 7 (Fig. 498)
+  by placing the ends of a pair of pliers, or a screw driver on the con-
+  tact post and transmission cover and moving the end of the pliers
+  or screw driver back and forth on the cover to make a good contact.
+  If a good live spark occurs the magneto is 0. K. (See Par. 999) .
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.501]
+uld be fitted.
+993 If there is no appreciable end play in the crankshaft, the strength
+  of the magneto should next be checked. An easy way to prove a
+  weak magneto on a car not equipped with a battery is to run one
+  wire from a six volt storage battery or three or four dry cells to the
+  left hand terminal connection on the terminal block when facing
+  front of dash (See point 11 Fig. 498) , and the other wire to some metal
+  part of the engine.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.484]
+clamps positioned directly between the magneto
+ coil cores, a reading of 45 units or better should register on the dial
+ when magnets are checked in the car. When magnets are removed
+ from the flywheel and checked individually a reading of 35 units or
+ better should be obtained ).
+277     If any of the magnets are weak or broken a set of new magnets
+     should be installed.
+278     The flywheel ring gear is inspected for badly worn or broken
+     teeth.
+279      If the magnets are 0. K.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.484]
+ill run on battery but not on magneto,
+   inspect the magneto contact post as described in Par. 991. If mag-
+   neto post is 0. K., the trouble is due either to excessive end play in
+   the cra nkshaft, weak magnets or a ground or short in the magneto
+   coil assembly. See Pars. 992 to 999.
+990 If the trouble indicates itself as lying in the ignition system,
+   remove and inspect commutator case and spring as described in
+   Par. 1003. If the commutator is 0.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.458]
+skets . . . . . . . . . . . . . . . . . . . . . ........... .                 10
+4     Install new bands and gaskets . . . . .. : . . . .            . ...... .          10
+5     Replace cover and starter, and run in bolts and screws ... .                      34
+6     Adjust bands, put on cover door ... .. ... . . . ..... . .... , .                  8
+7     Connect magneto wire, run on exhaust pipe nut, put in floor
+        boards and mat, and test for oil leaks and adjustment
+        on bands . . . . .
+============================================================
+
+To ensure reliable ignition, it's recommended to check the magneto contact post. This involves shorting the magneto contact post while someone cranks the car and making sure a good live spark occurs. Additionally, if necessary, the strength of the magneto can be checked by running wires from a battery to various points on the engine to see if they produce a strong spark. If any magnets are found to be weak or broken, new ones should be installed. Furthermore, the flywheel ring gear should also b...
+
+
+
+
+
+
+----------------------------------------------------------------------
+Question Style Causual:
+What should I do to keep the magneto working well?
+
+============================================================
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Source: ModelTNew.txt, Relevance: 0.565]
+ill run on battery but not on magneto,
+   inspect the magneto contact post as described in Par. 991. If mag-
+   neto post is 0. K., the trouble is due either to excessive end play in
+   the cra nkshaft, weak magnets or a ground or short in the magneto
+   coil assembly. See Pars. 992 to 999.
+990 If the trouble indicates itself as lying in the ignition system,
+   remove and inspect commutator case and spring as described in
+   Par. 1003. If the commutator is 0.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.548]
+ig. 193) .
+287 When the magnets are correctly positioned, install magnet
+  supports under ends of magnets (See " A" Fig. 194) . Place the
+  magnet clamps "B" over the ends of the 16 brass screws (new
+  screws should be used) , and run the screws down through the
+  magnet supports, flywheel and ring gear. Draw the brass screws
+  and magnet bolts down tightly.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.541]
+clamps positioned directly between the magneto
+ coil cores, a reading of 45 units or better should register on the dial
+ when magnets are checked in the car. When magnets are removed
+ from the flywheel and checked individually a reading of 35 units or
+ better should be obtained ).
+277     If any of the magnets are weak or broken a set of new magnets
+     should be installed.
+278     The flywheel ring gear is inspected for badly worn or broken
+     teeth.
+279      If the magnets are 0. K.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.535]
+uld be fitted.
+993 If there is no appreciable end play in the crankshaft, the strength
+  of the magneto should next be checked. An easy way to prove a
+  weak magneto on a car not equipped with a battery is to run one
+  wire from a six volt storage battery or three or four dry cells to the
+  left hand terminal connection on the terminal block when facing
+  front of dash (See point 11 Fig. 498) , and the other wire to some metal
+  part of the engine.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.531]
+driver back and forth on the cover to make a good contact.
+  If a good live spark occurs the magneto is 0. K. (See Par. 999) . If no
+  spark or a very weak spark occurs, remove magneto post and examine
+  contact spring to see that it is not weak, or broken, or that there is no
+  dirt or foreign matter between the contact and contact post spring.
+  After cleaning the contact point and contact post, replace magneto
+  terminal and again short the terminal to cover.
+============================================================
+
+To keep the magneto working well, you should first check if there's any end play in the crankshaft by removing the magneto post and examining the contact spring. If everything seems fine, then you can test the magneto using a simple method where you connect wires from a battery to the terminals of the magneto, ensuring a good spark occurs. If no spark happens, clean the contact points and springs thoroughly before reattaching them. This will help ensure the magneto remains operational. Additiona...
+
+
+
+
+
+
+----------------------------------------------------------------------
+Question Style Keywords Only:
+magneto upkeep Model T
+
+============================================================
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Source: ModelTNew.txt, Relevance: 0.482]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . 1    55
+11    Assemble valves and springs, and check timing of engine . .                                      20
+12    Overhaul transmission, including checking and replacing
+        magnets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1    50
+13    Assemble magneto coil, feed pipe, transmission to cylinder
+        block. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.457]
+ill run on battery but not on magneto,
+   inspect the magneto contact post as described in Par. 991. If mag-
+   neto post is 0. K., the trouble is due either to excessive end play in
+   the cra nkshaft, weak magnets or a ground or short in the magneto
+   coil assembly. See Pars. 992 to 999.
+990 If the trouble indicates itself as lying in the ignition system,
+   remove and inspect commutator case and spring as described in
+   Par. 1003. If the commutator is 0.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.450]
+shift, adjustment of. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 315
+        troubles. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1059
+Coil (magneto) checking for shorts and grounds . . . . . . . . . . . . . . 996
+Coil units, testing and adjusting. . . . . . . . . . . . . . . . . . . .. . . . . . . . . 1005
+Commutator, cleaning a nd inspecting ..... .... . . .......... .. . 1003
+                installing . . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.442]
+each magnet has been checked.
+ If the magnets are at full strength a reading of SO units or more
+ should register on the dial. (With the transmission cover removed
+ the strength of the magnets can be checked in the car in the same
+ manner, turning the engine over with the starting crank about one-
+ quarter turn at a time until all of the magnets have been tested.
+ With the magnet clamps positioned directly between the magneto
+ coil cores, a reading of 45 units or better should register on the dial
+ when ma
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.441]
+clamps positioned directly between the magneto
+ coil cores, a reading of 45 units or better should register on the dial
+ when magnets are checked in the car. When magnets are removed
+ from the flywheel and checked individually a reading of 35 units or
+ better should be obtained ).
+277     If any of the magnets are weak or broken a set of new magnets
+     should be installed.
+278     The flywheel ring gear is inspected for badly worn or broken
+     teeth.
+279      If the magnets are 0. K.
+============================================================
+
+Based on the given context, the maintenance procedures for the magneto in a Model T include:
+
+1. Checking the condition of the magnets.
+2. Inspecting the crankshaft for excessive end play if necessary.
+3. Testing the magneto coil assembly for shorts and grounds.
+4. Cleaning and inspecting the commutator case and spring.
+5. Installing new magnets if they are found to be weak or broken.
+6. Inspecting the flywheel ring gear for worn or broken teeth.
+
+The context also mentions that each magnet has b...
+
+
+
+
+
+
+----------------------------------------------------------------------
+Question Style Question Form:
+How can I tell when the magneto needs attention?
+
+============================================================
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Source: ModelTNew.txt, Relevance: 0.553]
+each magnet has been checked.
+ If the magnets are at full strength a reading of SO units or more
+ should register on the dial. (With the transmission cover removed
+ the strength of the magnets can be checked in the car in the same
+ manner, turning the engine over with the starting crank about one-
+ quarter turn at a time until all of the magnets have been tested.
+ With the magnet clamps positioned directly between the magneto
+ coil cores, a reading of 45 units or better should register on the dial
+ when ma
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.547]
+clamps positioned directly between the magneto
+ coil cores, a reading of 45 units or better should register on the dial
+ when magnets are checked in the car. When magnets are removed
+ from the flywheel and checked individually a reading of 35 units or
+ better should be obtained ).
+277     If any of the magnets are weak or broken a set of new magnets
+     should be installed.
+278     The flywheel ring gear is inspected for badly worn or broken
+     teeth.
+279      If the magnets are 0. K.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.489]
+gnition system, inspect the magneto contact post. While someone
+  cranks the car, short the magneto contact post, point 7 (Fig. 498)
+  by placing the ends of a pair of pliers, or a screw driver on the con-
+  tact post and transmission cover and moving the end of the pliers
+  or screw driver back and forth on the cover to make a good contact.
+  If a good live spark occurs the magneto is 0. K. (See Par. 999) .
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.479]
+uld be fitted.
+993 If there is no appreciable end play in the crankshaft, the strength
+  of the magneto should next be checked. An easy way to prove a
+  weak magneto on a car not equipped with a battery is to run one
+  wire from a six volt storage battery or three or four dry cells to the
+  left hand terminal connection on the terminal block when facing
+  front of dash (See point 11 Fig. 498) , and the other wire to some metal
+  part of the engine.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.471]
+FORD SERVICE
+
+
+            Testing the Strength of the Magnets
+
+
+
+
+                                    Fig. !88
+
+
+
+
+276  The magnets are checked for strength with a magnet tester. The
+ tester is placed between the ends of the magnets so that the poles on
+ the tester come in contact with both sides of the magnet (See Fig.
+ 188) . The operation is repeated until each magnet has been checked.
+ If the magnets are at full strength a reading of SO units or more
+ should register on the dial.
+============================================================
+
+To determine if the magneto needs attention, you can check its strength using a magnet tester. Place it between the ends of the magnets and repeat this process for each magnet. A reading of 45 units or higher indicates that the magnets are strong enough. However, if any of the magnets are found to be weak or broken, they should be replaced as indicated in the text. Additionally, inspecting the flywheel ring gear for worn or broken teeth is also important. Lastly, checking the ignition system for...
+
+
+
+
+
+
+----------------------------------------------------------------------
+Question Style Indirect:
+Practices that preserve steady magneto output
+
+============================================================
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Source: ModelTNew.txt, Relevance: 0.393]
+ve . There are two revolutions of the crankshaft to each pulsation.
+  The magneto should generate at least 7 volts at 400 R. P. M.
+995   If magneto fails to generate 7 volts, one or more of the magneto
+  coils are shorted or the magnets are weak. To remedy these troubles
+  it will be necessary to remove engine from frame and remove magneto
+  coil assembly, as described in Pars. 163 to 206 .
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.387]
+to magneto. It should read 3 to 4
+  amperes discharge when the engine is not running and the lights are ·
+  burning on bright.
+
+                          Short Circuits
+1104 In tracing a short in the generator to battery circuit, it should
+  be borne in mind that the current flows from each end, for example,
+  from the generator when running at a charging speed, and from the
+  battery to cutout when the generator is not charging.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.387]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . 1    55
+11    Assemble valves and springs, and check timing of engine . .                                      20
+12    Overhaul transmission, including checking and replacing
+        magnets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1    50
+13    Assemble magneto coil, feed pipe, transmission to cylinder
+        block. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.372]
+clamps positioned directly between the magneto
+ coil cores, a reading of 45 units or better should register on the dial
+ when magnets are checked in the car. When magnets are removed
+ from the flywheel and checked individually a reading of 35 units or
+ better should be obtained ).
+277     If any of the magnets are weak or broken a set of new magnets
+     should be installed.
+278     The flywheel ring gear is inspected for badly worn or broken
+     teeth.
+279      If the magnets are 0. K.
+
+---
+
+[Source: ModelTNew.txt, Relevance: 0.368]
+uld be fitted.
+993 If there is no appreciable end play in the crankshaft, the strength
+  of the magneto should next be checked. An easy way to prove a
+  weak magneto on a car not equipped with a battery is to run one
+  wire from a six volt storage battery or three or four dry cells to the
+  left hand terminal connection on the terminal block when facing
+  front of dash (See point 11 Fig. 498) , and the other wire to some metal
+  part of the engine.
+============================================================
+
+To preserve steady magneto output, practices include:
+
+1. Ensuring proper maintenance of the magneto system by regularly inspecting and testing its components.
+2. Checking the condition of the magnets periodically to ensure they are strong and free from damage or wear.
+3. Using appropriate clamping techniques to maintain consistent magnetic field strength across the core area.
+4. Performing thorough inspections of the flywheel and ring gear to identify and address any issues related to their wea...
+
+
+
+

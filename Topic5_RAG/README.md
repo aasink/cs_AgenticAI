@@ -87,10 +87,13 @@ This somewhat helps, the model already did a good job of noting when it did not 
 - [Query Phrasing Sensitivity Output](./outputs/e6_output.txt)
 
 Which phrasings retrieve the best chunks?
+The phrasings that recieved the best chunks were the formal, causal, and question form style questions and they mostly had scores of .56 ish where as the keyword and indirect were both much lower at .48 and .39.
 
 Do keyword-style queries work better or worse than natural questions?
+The keyword style queries work worse than natural questions as the chunks that keyword style got were lower than the natural questions and the answer that were returned were more vague and not as specific as the answers for the natural questions.
 
 What does this tell you about potential query rewriting strategies?
+What this tells me about query rewriting strategies is that it is better to make the question more specific and requesting specific information because the model gets better information and is able to create a better answer to the query.
 
 ## 7. Chunk Overlap Experiment
 

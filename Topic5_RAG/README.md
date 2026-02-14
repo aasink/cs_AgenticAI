@@ -97,6 +97,8 @@ What this tells me about query rewriting strategies is that it is better to make
 
 ## 7. Chunk Overlap Experiment
 
+- [Chunk Overlap Output](./outputs/e7_output.txt)
+
 Does higher overlap improve retrieval of complete information?
 
 What's the cost? (Index size, redundant information in context)

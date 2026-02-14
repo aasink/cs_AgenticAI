@@ -1,0 +1,80 @@
+Chunk Overlap: 0
+--------------------------------------------------------------------------
+Question: What are the steps to install the steering wheel?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 685, Source: ModelTNew.txt, Relevance: 0.696]
+.
+697    Examine key in steering gear post, making sure it fits tightly in
+    keyway (See Fig. 98) . Drive steering gear ball arm on end of shaft,
+    run down nut on end of steering gear post, drawing nut down tightly
+    and locking it with a cotter key as shown at "A" Fig. 33. The
+    front wheels are then installed as described in Par.
+
+---
+
+[Chunk: 192, Source: ModelTNew.txt, Relevance: 0.620]
+Insert the two steer-
+      ing gear bracket bolts- short through frame and bracket. Run
+      down nuts tightly on ends of bolts and lock with cotter keys
+      (See " A" Fig. 97).
+
+121 Install steering gear bracket block by placing steering gear
+  bracket block " B " between bracket and frame. Insert steering gear
+  bracket bolt- long "C" through frame, block and bracket. Run down
+  nut on end of bolt and lock with cotter key.
+36                        FORD SERVICE
+
+---
+
+[Chunk: 74, Source: ModelTNew.txt, Relevance: 0.616]
+(e) Remove steering wheel by running off steering wheel nut and
+         withdrawing wheel from drive pinion with a puller (See F ig. 14).
+     (f) Swing steering gear bracket cap to one side by remov ing one of
+         the two steering gear bracket bolts and loosening the other bolt
+         (See "A" Fig. 15).
+     (g) Lift out front mat and floor boards.
+
+---
+
+[Chunk: 191, Source: ModelTNew.txt, Relevance: 0.603]
+120   Install steering gear assembly-
+  (a) Insert steering gear post through hole in dash, positioning
+      steering gear bracket over end of steering gear post (See Fig. 36).
+  (b) Insta ll lead rod lever (See " A" Fig. 96) on lead rod by slipping
+      lever over end of rod and locking it in position by driving lead
+      rod lever pin "B" through lever and lead rod; the .e nds of the
+      pin are then riveted.
+  (c) Position steering gear bracket on frame.
+
+---
+
+[Chunk: 218, Source: ModelTNew.txt, Relevance: 0.602]
+141      Install steering wheel-
+  (a) Insert steering gear drive pmwn key into keyway in steering
+       gear drive pinion (See "A" Fig. 116), making sure that key fits
+       tightly in keyway.
+  (b ) Position steering wheel on end of steering gear drive pinion,
+       inserting key iri pinion into keyway "B" in steering wheel.
+  (c) Force wheel onto pinion with a driver as shown in Fig.
+============================================================
+
+
+Answer: To install the steering wheel according to the given context:
+
+(a) Insert steering gear drive pinion key into its keyway, ensuring it fits tightly.
+(b) Position the steering wheel on top of the steering gear drive pinion, aligning the keyway in the steering wheel with the keyway in the steering gear drive pinion.
+(c) Use a driver to force the steering wheel onto the steering gear drive pinion, as depicted in Figure [Figure number]. 
+
+The context provides specific instructions for these steps, including how to insert the steering gear drive pinion key, position the steering wheel correctly, and use a driver to secure it in place. No additional steps or explanations beyond those directly stated in the context are necessary.
+
+
+
+
+
+
+
+Chunk Overlap: 64
+--------------------------------------------------------------------------

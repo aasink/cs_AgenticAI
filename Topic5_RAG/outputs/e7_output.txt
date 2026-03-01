@@ -76,6 +76,9 @@ The context provides specific instructions for these steps, including how to ins
 
 
 
+
+
+
 Chunk Overlap: 64
 --------------------------------------------------------------------------
 Question: How do you install the carburetor hot air pipe?
@@ -150,3 +153,171 @@ Answer: To install the carburetor hot air pipe, follow these steps:
 3. Connect the adjusting rod to the carburetor needle valve by inserting its forked end through the needle valve and securing it with a cotter key ("B" Fig. 28).
 
 These instructions detail how to properly connect and secure the carburetor hot air pipe according to the given text. The process involves aligning the hot air pipe with the correct components and ensuring they're securely fastened for optimal performance.
+
+
+
+
+
+
+
+
+
+
+Chunk Overlap: 128
+--------------------------------------------------------------------------
+Question: How should the brake pull rods be adjusted so that both wheels engage evenly, and what method is used if the clevis and lever holes do not line up?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 210, Source: ModelTNew.txt, Relevance: 0.714]
+l shaft into clevises on brake rods.
+     (b ) L ine up holes in shaft and clevis and insert clevis pin (See "A"
+          Fig. 73).
+     (c) The bra ke pull rods are adjusted so they will pull evenly on
+          both wheels, and the brakes will set tightly when the hand
+          brake lever is in a vertical position. The adjustment is made
+          b y turning the threaded clevises "B" on the ends of the pull
+          rods .
+
+---
+
+[Chunk: 211, Source: ModelTNew.txt, Relevance: 0.647]
+tical position. The adjustment is made
+          b y turning the threaded clevises "B" on the ends of the pull
+          rods . Ordinarily the pins will slip into the clevises readily.
+          H owever , if trouble is experienced, place the hand brake lever
+          forward and dra w the pull rod forward until the lever enters the
+          clevis. Insert a drift through the clevis and lever holes to draw
+          t h em into line.
+
+---
+
+[Chunk: 209, Source: ModelTNew.txt, Relevance: 0.595]
+FORD SERVICE                               25
+
+
+
+
+                   Fig . 71                          Fig . 72
+
+
+75     Connect brake rods to control shalt and adjust brakes-
+     (a ) I nsert levers on control shaft into clevises on brake rods.
+     (b ) L ine up holes in shaft and clevis and insert clevis pin (See "A"
+          Fig.
+
+---
+
+[Chunk: 918, Source: ModelTNew.txt, Relevance: 0.589]
+radius rod lock nuts tightly against universal
+  joint housing (See "A" Fig. 359).
+653 Install brake rod support (See "D" Fig. 360) on radius rod, ap-
+  proximately 18" from bolt holes in forked end of radius rod.
+654     Position forked end of brake rod on camshaft lever.                                                 Insert
+    clevis pin and lock with cotter key .(See "B" Fig. 360) .
+655      Install rear wheel as outlined in Pars. 74 and 76.
+
+---
+
+[Chunk: 212, Source: ModelTNew.txt, Relevance: 0.583]
+il the lever enters the
+          clevis. Insert a drift through the clevis and lever holes to draw
+          t h em into line. The drift can be made from a piece of Ij4 " round
+          st eel tapered at the ends. When the clevis and lever holes line
+          up properly withdraw drift and insert clevis pin. Then try the
+          bra kes to see tha t they are set evenly, proceeding as follows: .
+          Wit h the rea r a xle j acked up pull the hand brake lever back as
+============================================================
+
+
+Answer: To ensure even engagement of both wheels, the brake pull rods should be adjusted by turning the threaded clevises "B" on the ends of the pull rods. If the clevis and lever holes do not line up, the hand brake lever should be placed forward and drawn forward until it enters the clevis. A drift can then be inserted through the clevis and lever holes to align them before inserting the clevis pin. This process ensures that the brakes will set tightly when the hand brake lever is in a vertical position.
+
+
+
+
+
+
+
+
+
+Chunk Overlap: 512
+--------------------------------------------------------------------------
+Question: What components are removed when taking off the radius rod ball cap, and what is the purpose of replacing the spark plugs with pipe plugs afterward?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 203, Source: ModelTNew.txt, Relevance: 0.701]
+radius rod b all cap stud nuts (See "A" F ig. 37) , a n d lifting off
+  ball cap springs "B" a nd b all cap "C" .
+38 Remove spark plugs, replacing them with pipe plugs. This pre-
+  vents any possibility of damaging the spa rk plugs when removing
+  engine. The pipe plugs prevent any foreign matter entering cylinders.
+39 Remove engine from chassis b y means of motor lifting hooks
+  and chain falls (See Fig.
+
+---
+
+[Chunk: 866, Source: ModelTNew.txt, Relevance: 0.652]
+over stud nuts (See "A" Fig. 217 ).
+364 To prevent damaging spark plugs it is advisable to remove them
+  by disconnecting spark plug wires at plugs and running out the plugs.
+365 Run out the two cylinder head outlet connection screws (See "A"
+  Fig. 218). Remove horn by running out cylinder inlet connection
+  screw "B" and cylinder head bolt "C".
+
+---
+
+[Chunk: 1569, Source: ModelTNew.txt, Relevance: 0.570]
+s Rods from Car .
+719 Break wire and run off the two radius rod ball cap stud nuts
+  (See "A" Fig. 379), lift off springs "B" and ball cap "C".
+720 Run off the two spring perch nuts "D" on ends of spring perches.
+  Radius rod can now be removed from car.
+
+                          Installing Radius Rods
+721 To install the new radius rod, the procedure is reversed. Before
+. installing the new rod, place plenty of cup grease in ball socket.
+722      Check alignment of front axle as described in Pars.
+
+---
+
+[Chunk: 204, Source: ModelTNew.txt, Relevance: 0.568]
+ith pipe plugs. This pre-
+  vents any possibility of damaging the spa rk plugs when removing
+  engine. The pipe plugs prevent any foreign matter entering cylinders.
+39 Remove engine from chassis b y means of motor lifting hooks
+  and chain falls (See Fig. 38) .
+40 Remove coil box b y running off the eight nuts on end s of coil
+  box t erminals (See " A " F ig. 39) a nd t h e four coil b ox bolt n uts " B ".
+41 R e move lighting wire loom terminals.
+
+---
+
+[Chunk: 1568, Source: ModelTNew.txt, Relevance: 0.561]
+CHAPTER XXII
+
+             Changing Front Radius Rods
+
+
+
+
+                                           Fig. 379
+
+
+
+         Removing Front Radius Rods from Car .
+719 Break wire and run off the two radius rod ball cap stud nuts
+  (See "A" Fig. 379), lift off springs "B" and ball cap "C".
+720 Run off the two spring perch nuts "D" on ends of spring perches.
+  Radius rod can now be removed from car.
+============================================================
+
+
+Answer: When taking off the radius rod ball cap, the following components are removed:
+
+1. Ball cap springs "B"
+2. Ball cap "C"
+
+The purpose of replacing the spark plugs with pipe plugs after removing the radius rod ball cap is to prevent damage to the spark plugs during removal of the engine. The pipe plugs serve to prevent any foreign matter from entering the cylinders. Additionally, they help prevent any potential damage to the spark plugs when the engine is being removed from the chassis using motor lifting hooks and chain falls. By preventing this damage, the pipe plugs ensure that the spark plugs remain undamaged throughout the process.

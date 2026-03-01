@@ -1,0 +1,906 @@
+Question 1: What is the correct piston ring gaps for a Model T Ford?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 3558, Source: ModelTNew.txt, Relevance: 0.665]
+Installing Piston Rings
+422 The piston ring is used to fill the gap between the piston and
+  cylinder wall, p
+
+---
+
+[Chunk: 9985, Source: ModelTNew.txt, Relevance: 0.633]
+221
+Rings , piston fitting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Chunk: 9984, Source: ModelTNew.txt, Relevance: 0.621]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 221
+Rings , piston fitting . . . . . . . . . . . . . . . . . .
+
+---
+
+[Chunk: 3610, Source: ModelTNew.txt, Relevance: 0.613]
+in the piston into which it is to be
+  fitted (See Fig. 254) . The ring should fit in the groove with a clear-
+  ance offrom .0
+
+---
+
+[Chunk: 3471, Source: ModelTNew.txt, Relevance: 0.607]
+408  Piston pms are fitted and installed as described in Pars. 415 and
+  418.
+104                        FORD SERVICE
+
+---
+
+[Chunk: 3637, Source: ModelTNew.txt, Relevance: 0.604]
+The gaps should be approximately 120° apart.
+431 Before installing pistons in cylinders place oil on sides of pistons
+  and wipe
+
+---
+
+[Chunk: 3597, Source: ModelTNew.txt, Relevance: 0.596]
+the cylinders sometimes wear slightly taper.
+  The ring gap clearance is .008" to .012" for the top ring, .006" to
+  .008" for m
+
+---
+
+[Chunk: 3567, Source: ModelTNew.txt, Relevance: 0.593]
+Ford rings are machined .003" taper on the face of the ring. This
+  insures the ring wearing to conform to the cylinder wall
+
+---
+
+[Chunk: 3447, Source: ModelTNew.txt, Relevance: 0.584]
+e fitted with .003" to .004" clearance between
+  piston and cylinder wall.
+
+---
+
+[Chunk: 3566, Source: ModelTNew.txt, Relevance: 0.583]
+423   Ford rings are machined .003" taper on the face of the ring.
+============================================================
+
+
+Answer: According to the context, the gaps for the top ring should be approximately 120° apart, ranging from .008" to .012", while the bottom ring's gap clearance should be .006" to .008". These specifications are mentioned in relation to the installation process of pistons in cylinders. However, the specific details about the gap sizes were not explicitly stated but inferred from the given information. To provide an exact specification, we would need more detailed instructions or data regarding the precise gap requirements for each ring type. Based solely on the provided context, these ranges can be considered approximate guidelines for the gap sizes.
+
+
+
+
+
+
+
+
+
+
+
+Question 2: What type of oil does the Ford manual specify for summer versus winter operation?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 4309, Source: ModelTNew.txt, Relevance: 0.514]
+Fig. 295                          Fig. 296
+
+
+495 After a car has been in service for a long period an oil lea
+
+---
+
+[Chunk: 6940, Source: ModelTNew.txt, Relevance: 0.514]
+ft with an oil stone.
+
+
+
+
+                                 Fig. 4 47
+214                                   FORD SERVICE
+
+---
+
+[Chunk: 5000, Source: ModelTNew.txt, Relevance: 0.501]
+See "A" Fig. 329).
+152                        FORD SERVICE
+
+
+
+
+                                 Fig. 3 49
+
+---
+
+[Chunk: 7186, Source: ModelTNew.txt, Relevance: 0.501]
+(See Fig. 453).
+224                          FORD SERVICE
+
+
+
+
+                 Fig. 482                          Fig. 483
+
+---
+
+[Chunk: 7075, Source: ModelTNew.txt, Relevance: 0.501]
+at "A" Fig. 468.
+220                         FORD SERVICE
+
+
+
+
+                 Fig. 467                           Fig. 468
+
+---
+
+[Chunk: 3493, Source: ModelTNew.txt, Relevance: 0.501]
+out.
+
+
+
+
+                Fig. 242                         Fig. 243
+                            FORD SERVICE
+
+---
+
+[Chunk: 4805, Source: ModelTNew.txt, Relevance: 0.498]
+Fig. 333
+
+
+
+
+               Fig. 334                       Fig. 335
+146                        FORD SERVICE
+
+---
+
+[Chunk: 9256, Source: ModelTNew.txt, Relevance: 0.497]
+Fig. 571
+284                       FORD SERVICE
+
+
+
+
+                                Fig. 572
+
+---
+
+[Chunk: 4867, Source: ModelTNew.txt, Relevance: 0.493]
+Fig. 343                          Fig. 344
+                            FORD SERVICE
+
+---
+
+[Chunk: 7019, Source: ModelTNew.txt, Relevance: 0.491]
+Fig. 462
+218                        FORD SERVICE
+
+
+
+
+                                 Fig. 463
+============================================================
+
+
+Answer: The Ford manual specifies different types of oil for summer versus winter operation. For summer use, it recommends using No. 2 or No. 3 engine oil, while for winter use, it suggests switching to No. 1 or No. 2 engine oil. This is indicated by the mention of "summer" and "winter" conditions in relation to the recommended oils.
+
+
+
+
+
+
+
+
+
+
+
+Question 3: How does the service manual recommend aligning the camshaft timing gear with the crankshaft gear during reassembly?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 4136, Source: ModelTNew.txt, Relevance: 0.660]
+nstalled.
+479   The alignment of the camshaft is checked by placing it on cen-
+  ters as shown in Fig. 286.
+
+---
+
+[Chunk: 4135, Source: ModelTNew.txt, Relevance: 0.591]
+If they are worn down more than
+  .0025" a new shaft should be installed.
+479   The alignment of the camshaft is checked by plac
+
+---
+
+[Chunk: 207, Source: ModelTNew.txt, Relevance: 0.571]
+For transmission bushings.
+Camshaft driver
+Camshaft puller
+Crankcase aligning jig
+Crankshaft turning bar
+Cylinder gauge
+Cylinder
+
+---
+
+[Chunk: 8005, Source: ModelTNew.txt, Relevance: 0.554]
+This can be done by removing
+   the cylinder front cover and inserting a brass bar between each side
+   of camshaft gear and cyl
+
+---
+
+[Chunk: 2440, Source: ModelTNew.txt, Relevance: 0.553]
+eck alignment of cover with camshaft as d escribed in
+  P a rs. 466 to 469.
+
+---
+
+[Chunk: 3938, Source: ModelTNew.txt, Relevance: 0.547]
+prung camshaft, and
+it will be necessary to remove and 'straighten the shaft as described
+in Chapter IX.
+
+---
+
+[Chunk: 3923, Source: ModelTNew.txt, Relevance: 0.545]
+The large time gear is removed from camshaft by
+running off the locknut (See "A" Fig.
+
+---
+
+[Chunk: 4161, Source: ModelTNew.txt, Relevance: 0.544]
+e again.
+480 After a camshaft has been straightened or when a new shaft is
+  to be installed, the bearings are first positioned
+
+---
+
+[Chunk: 3941, Source: ModelTNew.txt, Relevance: 0.540]
+e circumference of the gears, the camshaft should
+be checked for a loose bearing; this can be done by inserting the
+brass bars b
+
+---
+
+[Chunk: 3943, Source: ModelTNew.txt, Relevance: 0.538]
+etween each side of camshaft gear and cylinder block and
+118                        FORD SERVICE
+============================================================
+
+
+Answer: During reassembly, the service manual recommends aligning the camshaft timing gear with the crankshaft gear using the instructions provided in Parts 466 to 469. Specifically, it states that this alignment should be performed after either replacing the camshaft or installing a new one, and involves checking for any loose bearings which can be done by inserting brass bars between each side of the camshaft gear and the cylinder block. This ensures proper alignment and functionality of the engine components.
+
+
+
+
+
+
+
+
+
+
+
+Question 4: How do you install the carburetor hot air pipe?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 2965, Source: ModelTNew.txt, Relevance: 0.809]
+by inserting
+  cotter keys through ends of rod (See " A " Fig. 28) .
+344 Install carburetor hot air pipe as described in Par.
+
+---
+
+[Chunk: 1421, Source: ModelTNew.txt, Relevance: 0.758]
+91 ) .
+  (b) Clamp and pipe are then installed over manifold stud "B".
+  (c) Place lower end of hot air pipe "C" into carburetor
+
+---
+
+[Chunk: 6863, Source: ModelTNew.txt, Relevance: 0.757]
+t end of carburetor hot air pipe into carburetor, and
+       tighten the nut which holds hot air pipe to manifold (See "A"
+
+---
+
+[Chunk: 1419, Source: ModelTNew.txt, Relevance: 0.756]
+113   Install carburetor hot air pipe-
+  (a) Insert end of manifold cla mp into hole in hot air pipe (See "A"
+      Fig.
+
+---
+
+[Chunk: 4225, Source: ModelTNew.txt, Relevance: 0.752]
+tion.
+486 Install hot air pipe and carburetor pull and adjusting rods as
+  described in Pars.
+
+---
+
+[Chunk: 1423, Source: ModelTNew.txt, Relevance: 0.726]
+of hot air pipe "C" into carburetor mixing
+      chamber "D" . Run down nut on end or' manifold stud "B",
+      drawing nut dow
+
+---
+
+[Chunk: 1418, Source: ModelTNew.txt, Relevance: 0.722]
+by opening cock on sediment bulb under-
+  neath gasoline tank.
+
+113   Install carburetor hot air pipe-
+  (a) Insert end of manif
+
+---
+
+[Chunk: 6762, Source: ModelTNew.txt, Relevance: 0.709]
+ect feed pipe at carburetor by running off pack nut
+  (See Fig. 29 ).
+872 Loosen manifold stud nut which holds carburetor hot ai
+
+---
+
+[Chunk: 6853, Source: ModelTNew.txt, Relevance: 0.702]
+Car
+  (a) Insert the two carburetor flange bolts through inlet. pipe (See
+       "A" Fig.
+
+---
+
+[Chunk: 6862, Source: ModelTNew.txt, Relevance: 0.694]
+as and air which is drawn into
+       the cylinders.
+  (c) Insert end of carburetor hot air pipe into carburetor, and
+       tig
+============================================================
+
+
+Answer: To install the carburetor hot air pipe, first insert the end of the manifold clamp into the hole in the hot air pipe (refer to Figure A). Then, place the lower end of the hot air pipe into the carburetor, and tighten the nut holding the hot air pipe to the manifold (see Figure A). Finally, run down the nut on the end of the manifold stud B, drawing the nut down. This process involves several steps including clamping the manifold with a clamp, installing the hot air pipe into the carburetor, and tightening the nut for proper fitment. The installation also includes ensuring the carburetor hot air pipe runs smoothly from the carburetor's mixture chamber to the cylinder intake ports.
+
+
+
+
+
+
+
+
+
+
+
+Question 5: What are the steps to install the steering wheel?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 1680, Source: ModelTNew.txt, Relevance: 0.677]
+141      Install steering wheel-
+  (a) Insert steering gear drive pmwn key into keyway in steering
+       gear drive pinion (See
+
+---
+
+[Chunk: 10031, Source: ModelTNew.txt, Relevance: 0.658]
+. . . . . . 982
+Steering gear assembly installing . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Chunk: 1465, Source: ModelTNew.txt, Relevance: 0.638]
+through terminal on wire and run down screw into
+      plate.
+
+120   Install steering gear assembly-
+  (a) Insert steering gear
+
+---
+
+[Chunk: 1679, Source: ModelTNew.txt, Relevance: 0.634]
+Fig. 116                      Fi g. 11 7
+
+141      Install steering wheel-
+  (a) Insert steering gear driv
+
+---
+
+[Chunk: 1480, Source: ModelTNew.txt, Relevance: 0.630]
+Insert steering gear
+  bracket bolt- long "C" through frame, block and bracket.
+
+---
+
+[Chunk: 10030, Source: ModelTNew.txt, Relevance: 0.628]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 982
+Steering gear assembly installing . . . . . . .
+
+---
+
+[Chunk: 724, Source: ModelTNew.txt, Relevance: 0.626]
+bolts "B".
+  (e) Drive out the lead rod lever pin (See "C" Fig. 33), and slip
+      lever and bracket off end of steering gear s
+
+---
+
+[Chunk: 1675, Source: ModelTNew.txt, Relevance: 0.614]
+Fig. 35).
+140 Install steering post bracket cap (See ''A" Fig. 15) by run-
+  ning down the two screws which hold cap to steerin
+
+---
+
+[Chunk: 5891, Source: ModelTNew.txt, Relevance: 0.613]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1     0
+3     Install steering gear in car . .. . . . .. . . .
+
+---
+
+[Chunk: 716, Source: ModelTNew.txt, Relevance: 0.610]
+ing it out of keyway with a hammer and drift.
+  (b) Run off nut on end of steering gear bracket bolt- side and with-
+      draw
+============================================================
+
+
+Answer: Based on the given context, the steps to install the steering wheel appear to be:
+
+(a) Insert steering gear drive key into keyway in steering gear drive pinion (Refer to Figure 116).
+
+(b) Insert steering gear bracket bolt-long "C" through frame, block, and bracket (Refer to Figure 117).
+
+(c) Install steering gear assembly - insert steering gear bracket bolt-long "C" through frame, block, and bracket (Refer to Figure 117).
+
+(d) Install steering gear bracket bolt-long "C" through frame, block, and bracket (Refer to Figure 117).
+
+(e) Drive out the lead rod lever pin (Refer to Figure 33).
+
+(f) Slip lever and bracket off end of steering gear shaft (Refer to Figure 33). 
+
+(g) Run down the two screws which hold cap to steering gear shaft (Refer to Figure 15).
+
+(h) Install steering post bracket cap (Refer to Figure 35).
+
+(i) Run down the two screws which hold cap to steering gear shaft (Refer to Figure 15).
+
+(j) Insert steering gear bracket bolt-long "C" through frame, block, and bracket (Refer to Figure 117).
+
+(k) Install steering gear bracket bolt-long "C" through frame, block, and bracket (Refer to Figure 117).
+
+(l) Run down the two screws which hold cap to steering gear shaft (Refer to Figure 15).
+
+(m) Install steering post bracket cap (Refer to Figure 35). 
+
+Note: The exact sequence may vary slightly depending on the specific model or manufacturer's instructions. However, these steps outline the general process for installing the steering wheel as described in the context.
+
+
+
+
+
+
+
+
+
+
+
+Question 6: What components are removed when taking off the radius rod ball cap, and what is the purpose of replacing the spark plugs with pipe plugs afterward?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 738, Source: ModelTNew.txt, Relevance: 0.621]
+37) , a n d lifting off
+  ball cap springs "B" a nd b all cap "C" .
+38 Remove spark plugs, replacing them with pipe plugs.
+
+---
+
+[Chunk: 1577, Source: ModelTNew.txt, Relevance: 0.588]
+he pipe plugs which had pre-
+  viously been installed (See Par. 38) and screw in spark plugs, con-
+  necting the wires to coil b
+
+---
+
+[Chunk: 5307, Source: ModelTNew.txt, Relevance: 0.588]
+The connecting rod and ball socket cap can then be lifted off
+  spindle connecting rod yoke ball.
+
+---
+
+[Chunk: 3062, Source: ModelTNew.txt, Relevance: 0.567]
+217 ).
+364 To prevent damaging spark plugs it is advisable to remove them
+  by disconnecting spark plug wires at plugs and runni
+
+---
+
+[Chunk: 3682, Source: ModelTNew.txt, Relevance: 0.562]
+emove connecting rod bearing caps and pistons . . . . . . . . .                                      15
+4     Remove rings, clea
+
+---
+
+[Chunk: 3681, Source: ModelTNew.txt, Relevance: 0.559]
+5
+3     Remove connecting rod bearing caps and pistons . . . . . . . . .
+
+---
+
+[Chunk: 1575, Source: ModelTNew.txt, Relevance: 0.554]
+rfl y " B " b y bending end of wire.
+130 Install spark plugs by removing the pipe plugs which had pre-
+  viously been installed
+
+---
+
+[Chunk: 666, Source: ModelTNew.txt, Relevance: 0.552]
+ig.
+     25) and running out cylinder head bolt "B" which holds horn to
+     cylinder head.
+22     Disconnect spark plug wires "
+
+---
+
+[Chunk: 3342, Source: ModelTNew.txt, Relevance: 0.549]
+The connecting rod bearing cap is then assem-
+      bled to the rod by inserting it over the ends of the two connecting
+      ro
+
+---
+
+[Chunk: 3330, Source: ModelTNew.txt, Relevance: 0.548]
+both the cap and rod in
+  order to properly fit rod to shaft . Before removing cap from rod, the
+  cap and rod should be marked
+============================================================
+
+
+Answer: When taking off the radius rod ball cap, the components removed include the connecting rod and ball socket cap. The purpose of replacing the spark plugs with pipe plugs afterward is to prevent damaging the spark plugs during the process. This step involves unscrewing the pipe plugs previously installed and reconnecting the wires to the coil. It's important to note that this procedure was described in detail in Paragraphs 37 and 38, where specific steps were outlined for removing and reattaching the spark plugs. However, the exact sequence and details of these operations aren't explicitly stated here but are implied within the given text.
+
+
+
+
+
+
+
+
+
+
+
+Question 7: How should the brake pull rods be adjusted so that both wheels engage evenly, and what method is used if the clevis and lever holes do not line up?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 1178, Source: ModelTNew.txt, Relevance: 0.630]
+e pull rod forward until the lever enters the
+          clevis. Insert a drift through the clevis and lever holes to draw
+
+---
+
+[Chunk: 1166, Source: ModelTNew.txt, Relevance: 0.627]
+(a ) I nsert levers on control shaft into clevises on brake rods.
+     (b ) L ine up holes in shaft and clevis and insert cle
+
+---
+
+[Chunk: 1173, Source: ModelTNew.txt, Relevance: 0.595]
+The adjustment is made
+          b y turning the threaded clevises "B" on the ends of the pull
+          rods .
+
+---
+
+[Chunk: 1165, Source: ModelTNew.txt, Relevance: 0.589]
+75     Connect brake rods to control shalt and adjust brakes-
+     (a ) I nsert levers on control shaft into clevises on brake r
+
+---
+
+[Chunk: 1177, Source: ModelTNew.txt, Relevance: 0.579]
+ver
+          forward and dra w the pull rod forward until the lever enters the
+          clevis.
+
+---
+
+[Chunk: 1164, Source: ModelTNew.txt, Relevance: 0.575]
+Fig . 71                          Fig . 72
+
+
+75     Connect brake rods to control shalt and adjust brakes-
+
+---
+
+[Chunk: 5217, Source: ModelTNew.txt, Relevance: 0.573]
+ve brake rod and
+        support, remove radius rod bolts and radius rod . . . . . . . .
+
+---
+
+[Chunk: 1172, Source: ModelTNew.txt, Relevance: 0.573]
+when the hand
+          brake lever is in a vertical position. The adjustment is made
+          b y turning the threaded clevis
+
+---
+
+[Chunk: 1170, Source: ModelTNew.txt, Relevance: 0.569]
+l evenly on
+          both wheels, and the brakes will set tightly when the hand
+          brake lever is in a vertical position
+
+---
+
+[Chunk: 1168, Source: ModelTNew.txt, Relevance: 0.560]
+shaft and clevis and insert clevis pin (See "A"
+          Fig. 73).
+     (c) The bra ke pull rods are adjusted so they will pul
+============================================================
+
+
+Answer: To ensure even engagement between both wheels, the brake pull rods should be adjusted by turning them evenly on both wheels. If the clevis and lever holes do not line up, the method used is to insert a drift through the clevis and lever holes to draw the pull rod forward until the lever enters the clevis. This ensures proper alignment and functionality of the braking system.
+
+
+
+
+
+
+
+
+
+
+
+Question 8: What maintenance is required for the engine?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 3017, Source: ModelTNew.txt, Relevance: 0.574]
+ble engine and wash all parts . . . . . . . . . . . . . . . . .                          40
+ 5    Ream valve and push rod guides
+
+---
+
+[Chunk: 3015, Source: ModelTNew.txt, Relevance: 0.550]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         10
+ 4    Disassemble engine and wash all parts . . . .
+
+---
+
+[Chunk: 9565, Source: ModelTNew.txt, Relevance: 0.544]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .               44
+Bearings, camshaft, removing a nd installing .
+
+---
+
+[Chunk: 9016, Source: ModelTNew.txt, Relevance: 0.517]
+hen overhauling an engine or transmission, or in Ifact perform-
+  ing any repair operation which requires the removal of the ·c
+
+---
+
+[Chunk: 4299, Source: ModelTNew.txt, Relevance: 0.515]
+line, change oil . . . . . .. .. . . . ... .. .. ....... . .. .         10
+3     Install gear, front cover, fan, radiator . ..
+
+---
+
+[Chunk: 9566, Source: ModelTNew.txt, Relevance: 0.511]
+44
+Bearings, camshaft, removing a nd installing . . . . . . . . . . . . . . . . . .
+
+---
+
+[Chunk: 3016, Source: ModelTNew.txt, Relevance: 0.504]
+10
+ 4    Disassemble engine and wash all parts . . . . . . . . . . . . . . . . .
+
+---
+
+[Chunk: 8378, Source: ModelTNew.txt, Relevance: 0.503]
+n-
+  ever the engine is running at or above normal road speeds. Its
+  proper operation determines to a large extent the life of
+
+---
+
+[Chunk: 4256, Source: ModelTNew.txt, Relevance: 0.499]
+t new bearings, install shaft and gear, run in
+        bearing set screws, lower push rods and valves .
+
+---
+
+[Chunk: 1836, Source: ModelTNew.txt, Relevance: 0.498]
+assembling, clean all parts thoroughly, also lubricate all
+  moving parts and the surfaces upon which they move, such as
+  beari
+============================================================
+
+
+Answer: The maintenance required for the engine includes disassembling it and washing all parts. This can be seen from the following chunks:
+
+[Chunk: 3017, Source: ModelTNew.txt, Relevance: 0.574] "ble engine and wash all parts . . . . . . . . . . . . . . . . ."
+[Chunk: 3015, Source: ModelTNew.txt, Relevance: 0.550] ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .         10
+ 4    Disassemble engine and wash all parts . . . ."
+
+
+
+
+
+
+
+
+
+
+
+Question 9: What maintenance is recommended for the magneto to ensure reliable ignition?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 8386, Source: ModelTNew.txt, Relevance: 0.558]
+our when the lights are
+  off and the ignition switch is turned to magneto.
+
+---
+
+[Chunk: 7531, Source: ModelTNew.txt, Relevance: 0.555]
+a good live spark occurs the magneto is 0. K. (See Par. 999) . If no
+  spark or a very weak spark occurs, remove magneto post a
+
+---
+
+[Chunk: 7530, Source: ModelTNew.txt, Relevance: 0.528]
+to make a good contact.
+  If a good live spark occurs the magneto is 0. K. (See Par. 999) .
+
+---
+
+[Chunk: 7524, Source: ModelTNew.txt, Relevance: 0.526]
+ing in the
+  ignition system, inspect the magneto contact post. While someone
+  cranks the car, short the magneto contact post,
+
+---
+
+[Chunk: 2511, Source: ModelTNew.txt, Relevance: 0.521]
+ine over with the starting crank about one-
+ quarter turn at a time until all of the magnets have been tested.
+ With the magnet
+
+---
+
+[Chunk: 7549, Source: ModelTNew.txt, Relevance: 0.518]
+ankshaft, the strength
+  of the magneto should next be checked. An easy way to prove a
+  weak magneto on a car not equipped with
+
+---
+
+[Chunk: 7523, Source: ModelTNew.txt, Relevance: 0.502]
+If the trouble indicates itself as lying in the
+  ignition system, inspect the magneto contact post.
+
+---
+
+[Chunk: 8383, Source: ModelTNew.txt, Relevance: 0.498]
+he engine is idling, no lights burning,
+  and the ignition switch turned on the magneto side.
+
+---
+
+[Chunk: 2512, Source: ModelTNew.txt, Relevance: 0.491]
+ime until all of the magnets have been tested.
+ With the magnet clamps positioned directly between the magneto
+ coil cores, a re
+
+---
+
+[Chunk: 7537, Source: ModelTNew.txt, Relevance: 0.483]
+place magneto
+  terminal and again short the terminal to cover. If no spark, or a
+  very weak spark occurs the trouble is due ei
+============================================================
+
+
+Answer: Based on the context provided, it's recommended to inspect the magneto contact post while someone cranks the car to ensure a good connection. Additionally, if a good live spark does not occur, the magneto post should be removed and replaced if necessary. Furthermore, checking the strength of the magneto after testing each magnet can help identify any issues within the ignition system. Lastly, ensuring the magneto terminals are properly connected during the inspection process is crucial for reliable ignition.
+
+
+
+
+
+
+
+
+
+
+
+Question 10: What maintenance is required for the brakes?
+
+============================================================
+RETRIEVED CONTEXT:
+============================================================
+[Chunk: 9595, Source: ModelTNew.txt, Relevance: 0.626]
+. . . . . . . . . . . . 334
+Brakes, emergency, adjustment of .                          ......................
+
+---
+
+[Chunk: 9594, Source: ModelTNew.txt, Relevance: 0.598]
+. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 334
+Brakes, emergency, adjustment of .
+
+---
+
+[Chunk: 2618, Source: ModelTNew.txt, Relevance: 0.497]
+installed.
+294 Examine brake drum at points "D", "E", "F" and " G" Fig.
+  196; if web is cracked, lugs badly worn, rivets loosen
+
+---
+
+[Chunk: 1836, Source: ModelTNew.txt, Relevance: 0.483]
+assembling, clean all parts thoroughly, also lubricate all
+  moving parts and the surfaces upon which they move, such as
+  beari
+
+---
+
+[Chunk: 2733, Source: ModelTNew.txt, Relevance: 0.475]
+9  Inspect clutch discs for wear and cracks. If discs are 0. K. oil
+  thoroughly and assemble them in brake drum.
+
+---
+
+[Chunk: 4437, Source: ModelTNew.txt, Relevance: 0.469]
+This insures maximum life from the linings
+  and an exceptionally smooth braking effect.
+516 After the new linings have been riv
+
+---
+
+[Chunk: 9091, Source: ModelTNew.txt, Relevance: 0.468]
+ind the four steel
+  clips on housing plate (see "A" Fig. 557). Line up brake shoe so that
+  hub brake cam (see "A" Fig.
+
+---
+
+[Chunk: 9600, Source: ModelTNew.txt, Relevance: 0.467]
+. . . . . . . . . . . . . . . . 515
+Brake shoe, removing. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Chunk: 9475, Source: ModelTNew.txt, Relevance: 0.467]
+. . . ...... . . . . . 43 7
+              brake, em ergency ... . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+---
+
+[Chunk: 4570, Source: ModelTNew.txt, Relevance: 0.463]
+rotrude through the
+  slots in the lug, the shoulder of the lug snapping over the end of the
+  brake band and holding it securel
+============================================================
+
+
+Answer: The maintenance required for the brakes includes adjusting the emergency brakes, examining the brake drums for cracks or wear, cleaning and lubricating moving parts, inspecting clutch discs for wear and cracks, assembling brake shoes properly, and ensuring thorough lubrication of components. Additionally, it's important to remove brake shoes after installation.
+
+
+
+
+
+
+
+
+
+

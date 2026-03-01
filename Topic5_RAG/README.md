@@ -100,43 +100,72 @@ What this tells me about query rewriting strategies is that it is better to make
 - [Chunk Overlap Output](./outputs/e7_output.txt)
 
 Does higher overlap improve retrieval of complete information?
+The higher overlap does improve the retrieval of the complete information as more of the information that is needed is included in the first top k chunk that is retrived.
 
 What's the cost? (Index size, redundant information in context)
+The Cost is that the index size does get way bigger and the information that is in the context is a lot more and some of it is less relevant. 
 
 Is there a point of diminishing returns?
+There is a point of diminishing returns and that is when the size of the overlap gets so big that the size of the overlap starts to apprach the size of the chunk.
+
 
 ## 8. Chunk Size Experiment
 
+- [Chunk Size Output](./outputs/e8_output.txt)
+
 How does chunk size affect retrieval precision (relevant vs. irrelevant content)?
+The way that the chunk size affects the retrieval precision is that the larger the size of the chunk the more context that is irrelevant to the question that is being queried and the smaller the chunk size the less context is there but it is more relevant to the query.
 
 How does it affect answer completeness?
+For the smaller chunk sizes, the model responds with that there isnt any information about that in the context, which is not the case as the larger chunk sizes, the model is able to answer so the chunk size does affect completeness in how much information the model has for that question.
 
 Is there a sweet spot for your corpus?
+For my corpus, the small chunk size was not great in terms of completness, but for the medium it was okay but still for some questions it had trouble answering, but for the large chunk size, it was pretty good in terms of the answers it was returning.
 
 Does optimal size depend on the type of question?
+The optimal size does depend on the type of question as for some questions it had trouble answering at the lower chunk sizes but for others it didnt have much of a problem. 
 
 ## 9. Retrieval Score Analysis
 
+- [Retrieval Score Analysis Output](./outputs/e9_output.txt)
+
 When is there a clear "winner" (large gap between #1 and #2)?
+There is a clear winner sometimes, mostly when the question was more specific the first retrieved chunk had a higher score but for the more vague questions the chunk scores were very similar to each other.
 
 When are scores tightly clustered (ambiguous)?
+The scores were tightly clustered when the questions were more vague and less specific as was mentioned in the previous question.
 
 What score threshold would you use to filter out irrelevant results?
+The score threshold that I would use would be somehwere in the 0.5 relevance since most questions that were specific had relevance scores way higher but for the more vague questions, the relevance was closer to 0.5.
 
 How does score distribution correlate with answer quality?
+As mentioned in the previous question, the questions that were more specific had higher relevance scores at the top where as the more vague questions had a similar score distribution and were not as good answers as the specific questions ones.
+
+Implement a score threshold (e.g., only include chunks with score > 0.5). How does this affect results?
+This affects the results in that there is less context for some of the questions which does means the answers do suffer and arent as good.
 
 ## 10. Prompt Template Variations
 
+- [Prompt Template Variations Output](./outputs/e10_output.txt)
+
 Which prompt produces the most accurate answers?
+The prompts that produced the most accurate answers where the permissive and structured output prompts as they had enough good information that helped answer teh query in a way where there was a good enough amount of context provided with the answer.
 
 Which produces the most useful answers?
+The most useful answers I think were the permissive prompts as they gave a good summary of the information from the corpus while interweaving it with the answer that it gernerated.
 
 Is there a trade-off between strict grounding and helpfulness?
+The tradeoff with strict grounding and helpfulness is that the model can only pull information from the corpus and not use its own knowledge which for certain things like the model T corpus would be beneficial if the models knowledge is spread among the different model years and you need info from this specific model year corpus.
 
 ## 11. Cross-Document Synthesis
 
+- [Cross-Document Synthesis Output](./outputs/e11_output.txt)
+
 Can the model successfully combine information from multiple chunks?
+The model can successfully combine information from multiple chunks and it does quite a good job doing it even when the top k is small and also when it is large.
 
 Does it miss information that wasn't retrieved?
+It does miss information that wasnt retrieved especially when the topk is small as it does miss some of the information that the model does need to properly answer the question.
 
 Does contradictory information in different chunks cause problems?
+Yes contradictory information in different chunks does cause problems and it does confuse the model a bit and the model does state that there was contradictory information for some of these situations.

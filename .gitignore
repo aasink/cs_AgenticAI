@@ -12,3 +12,8 @@
 /Topic3_Tools/*.db-shm
 /Topic3_Tools/*.db-wal
 /Topic5_RAG/Corpora/
+/Topic6_VLM/*.db
+/Topic6_VLM/*.db-shm
+/Topic6_VLM/*.db-wal
+/Topic6_VLM/imgs/
+/Topic6_VLM/__pycache__

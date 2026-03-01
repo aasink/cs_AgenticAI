@@ -16,4 +16,6 @@
 /Topic6_VLM/*.db-shm
 /Topic6_VLM/*.db-wal
 /Topic6_VLM/imgs/
+/Topic6_VLM/videos/
+/Topic6_VLM/frames/
 /Topic6_VLM/__pycache__

@@ -183,6 +183,6 @@ class App:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    root.iconphoto(True, ImageTk.PhotoImage(Image.open("imgs/icon.png")))
+    root.iconphoto(True, ImageTk.PhotoImage(Image.open("icon.png")))
     App(root)
     root.mainloop()

@@ -2,6 +2,7 @@
 *.env
 .env.local
 .DS_Store
+/slides/
 /Topic1_Running an LLM/*.json
 /Topic1_Running an LLM/*.xlsx
 /Topic2_Frameworks/*.db

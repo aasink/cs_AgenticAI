@@ -30,11 +30,23 @@ def eval_one(sampling_client, tokenizer, ex: dict) -> bool:
     sql = sample_from_model(sampling_client, tokenizer, ex["context"], ex["question"])
     return sql_matches(sql, ex["answer"], schema=ex["context"])
 
+#def evaluate_test_set(sampling_client, tokenizer, test_data: list) -> float:
+#    """Compute accuracy = fraction of test examples where generated SQL matches expected."""
+#    correct = sum(1 for ex in test_data if eval_one(sampling_client, tokenizer, ex))
+#    return correct / len(test_data)
+
 def evaluate_test_set(sampling_client, tokenizer, test_data: list) -> float:
     """Compute accuracy = fraction of test examples where generated SQL matches expected."""
-    correct = sum(1 for ex in test_data if eval_one(sampling_client, tokenizer, ex))
-    return correct / len(test_data)
-
+    correct = 0
+    total = len(test_data)
+    for i, ex in enumerate(test_data):
+        if eval_one(sampling_client, tokenizer, ex):
+            correct += 1
+        pct = (i + 1) / total
+        bar = int(pct * 40)
+        print(f"  [{'█' * bar}{'░' * (40 - bar)}] {i+1}/{total} ({pct:.0%}) correct: {correct}", end="\r", flush=True)
+    print()
+    return correct / total
 
 
 #================================ Prepare Training Data Functions ================================#

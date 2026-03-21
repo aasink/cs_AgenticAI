@@ -22,19 +22,23 @@ resp = requests.post(
     json=payload
 )
 
-print("Status code:", resp.status_code)
-print("Raw response:", resp.text)
+#print("Status code:", resp.status_code)
+#print("Raw response:", resp.text)
 
 data = json.loads(resp.text.split("data:")[1].strip())
-print(data["result"]["tools"])
 
 for tool in data["result"]["tools"]:
     desc = tool['description'].split('\n')[1].strip()
     inSchema = tool['inputSchema']
 
-    print(inSchema)
-
     print(f"Tool: {tool['name']} \nDescription: {desc}")
-    print(f"Required: ")
-    for r in inSchema['required']: print(f"{r} ")#({})")
+
+    print(f"Required: ", end="")
+    for p in inSchema['properties']:
+        if p in inSchema['required']: print(f"{p} ({inSchema['properties'][p]['type']})   ", end="", flush=True)
     print()
+
+    print(f"Optional: ", end="")
+    for p in inSchema['properties']:
+        if p not in inSchema['required']: print(f"{p} ({inSchema['properties'][p]['type']})   ", end="", flush=True)
+    print("\n\n")

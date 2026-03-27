@@ -1,0 +1,4 @@
+ollama
+pytesseract
+Pillow
+pymupdf

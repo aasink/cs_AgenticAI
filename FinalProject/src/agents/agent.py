@@ -3,7 +3,6 @@ import os
 from src.tools import pdf, vlm
 from src.agents import analyzer, executor, verifier, output
 
-
 def run(pdf_path: str, output_path: str = None, model: str = vlm.DEFAULT_MODEL) -> str:
     """
     Run the full agent pipeline on a PDF.
@@ -52,18 +51,17 @@ def _process_page(image_path: str, model: str) -> str:
     Returns:
         Extracted text for the page
     """
-    analysis = analyzer.analyze(image_path, model=model) # analyze the page
+    analysis = analyzer.analyze(image_path, model=model)        # analyze the page
     classification = analysis
-    print(classification)
 
     attempts = 0
     extracted_text = None
 
     while verifier.should_retry(attempts):
         attempts += 1
-        extracted_text = executor.execute(image_path, classification, model=model)  # execute extraction based on classification
+        extracted_text = executor.execute(image_path, classification, model=model)          # execute extraction based on classification
 
-        result = verifier.verify(image_path, extracted_text, model=model)  # verify the output
+        result = verifier.verify(image_path, extracted_text, model=model)       # verify the output
 
         if result["passed"]:
             break

@@ -6,6 +6,8 @@ MODELS = [
     "granite3.2-vision",
     "llama3.2-vision",
     "qwen3-vl:2b",
+    "qwen3-vl:4b",
+    "qwen3-vl:8b"
 ]
 
 DEFAULT_MODEL = "qwen3-vl:2b"

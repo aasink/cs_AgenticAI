@@ -2,10 +2,13 @@ import ollama
 
 # list of available models
 MODELS = [
-    "llava"
+    "llava",
+    "granite3.2-vision",
+    "llama3.2-vision",
+    "qwen3-vl:2b",
 ]
 
-DEFAULT_MODEL = "llava"
+DEFAULT_MODEL = "qwen3-vl:2b"
 
 def list_models() -> list[str]:
     """Return the list of available VLM models."""

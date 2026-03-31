@@ -32,4 +32,4 @@ def analyze(image_path: str, model: str = vlm.DEFAULT_MODEL) -> dict:
     if label in ALL_CLASSIFICATIONS:  # If the model returns a valid label, use it
         return label
 
-    return MIXED        # Otherwise fall back to something safe
+    return SINGLE_COLUMN       

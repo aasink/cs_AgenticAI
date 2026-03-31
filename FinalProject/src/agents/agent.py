@@ -28,7 +28,7 @@ def run(pdf_path: str, output_path: str = None, model: str = vlm.DEFAULT_MODEL) 
         pages = []
         for i, image_path in enumerate(image_paths):                        # process each page
             print(f"  Page {i + 1}/{len(image_paths)}...", end=" ")
-            page_text = _process_page(image_path, model)
+            page_text = process_page(image_path, model)
             pages.append(page_text)
             print("done")
 
@@ -39,7 +39,7 @@ def run(pdf_path: str, output_path: str = None, model: str = vlm.DEFAULT_MODEL) 
     return output_path
 
 
-def _process_page(image_path: str, model: str) -> str:
+def process_page(image_path: str, model: str) -> str:
     """
     Process a single page through the full agent loop:
     analyze → execute → verify → retry if needed

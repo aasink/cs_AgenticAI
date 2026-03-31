@@ -15,7 +15,7 @@ Definitions:
 - multi_column: text is arranged in two or more vertical columns.
 - table: the page contains a structured grid of rows and columns.
 - figure: the page is dominated by an image, diagram, chart, or illustration.
-- mixed: the page contains both significant text and a significant figure or table.
+- mixed: the page contains two or more major content types (text, figure, table), OR any figure/table occupies roughly half or more of the page.
 - empty: blank or nearly blank page.
 
 Rules:
@@ -70,6 +70,6 @@ Check for the following issues:
 
 Reply with either:
 PASS - if the output looks correct
-FAIL: <brief reason> - if there is a problem
+FAIL: <brief reason (1-2 sentences max)> - if there is a problem
 
 Do not rewrite the text, just evaluate it."""

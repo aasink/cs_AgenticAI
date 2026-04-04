@@ -19,15 +19,15 @@ An agentic, open-source alternative to ChatGPT Vision for processing complex PDF
  
 ## The Problem
  
-PDFs with complex layouts — multiple columns, embedded tables — get garbled when you extract text normally. ChatGPT Vision handles these perfectly, but you can't call it via API.This pipeline replicates that capability using entirely open-source, locally running tools.
+PDFs with complex layouts — multiple columns, embedded tables — get garbled when you extract text normally. ChatGPT Vision handles these okay, but you can't call it via API.DePDF replicates that capability using entirely open-source, locally running tools.
  
-This pipeline is particularly useful as a preprocessing step for RAG pipelines, where garbled table extraction breaks question answering over document contents.
+DePDF is particularly useful as a preprocessing step for RAG pipelines, where garbled table extraction breaks question answering over document contents.
  
 ---
  
 ## How It Works
  
-This pipeline runs an agent loop over each page of a PDF:
+DePDF runs an agent loop over each page of a PDF:
  
 1. **Analyze** — the agent looks at the page visually and classifies its layout
 2. **Execute** — based on the classification, the agent picks the right extraction strategy

@@ -32,7 +32,7 @@ class StreamToLog:
 class App:
     def __init__(self, root):
         self.root = root
-        self.root.title("Merlin")
+        self.root.title("DePDF")
         self.root.geometry("720x560")
         self.root.resizable(False, False)
         self.root.configure(bg=BG)
@@ -41,14 +41,14 @@ class App:
         self._build_ui()
 
     def _set_icon(self):
-        icon = tk.PhotoImage(file="merlin.png")
+        icon = tk.PhotoImage(file="icon.png")
         self.root.iconphoto(True, icon)
 
     def _build_ui(self):
         # title
         tk.Label(
             self.root,
-            text="Merlin",
+            text="DePDF",
             font=("Helvetica", 16, "bold"),
             bg=BG,
             fg=TEXT_PRIMARY

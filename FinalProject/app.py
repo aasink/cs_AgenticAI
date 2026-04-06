@@ -11,23 +11,25 @@ from src.tools.vlm import DEFAULT_MODEL, MODELS
 # ─────────────────────────────────────────────────────────────
 # macOS Big Sur Color Palette
 # ─────────────────────────────────────────────────────────────
-WINDOW_BG       = "#ECECEC"   # macOS utility gray
-PANEL_BG        = "#FFFFFF"   # white rounded panels
-SEPARATOR       = "#D0D0D0"
+WINDOW_BG             = "#ECECEC"
+PANEL_BG              = "#FFFFFF"
+SEPARATOR             = "#D0D0D0"
 
-TEXT_PRIMARY    = "#1C1C1C"
-TEXT_SECONDARY  = "#6E6E6E"
+TEXT_PRIMARY          = "#1C1C1C"
+TEXT_SECONDARY        = "#6E6E6E"
 
 BUTTON_UTILITY_BG     = "#FFFFFF"
 BUTTON_UTILITY_BORDER = "#C8C8C8"
 BUTTON_UTILITY_HOVER  = "#E5E5E5"
 
-BUTTON_PRIMARY_BG     = "#0A84FF"   # macOS Big Sur blue
+BUTTON_PRIMARY_BG     = "#0A84FF"
 BUTTON_PRIMARY_HOVER  = "#006FE0"
 BUTTON_PRIMARY_ACTIVE = "#006FE0"
 
-LOG_BG         = "#1E1E1E"
-LOG_TEXT       = "#E0E0E0"
+COLOR_SUCCESS         = "#34C759"
+
+LOG_BG                = "#1E1E1E"
+LOG_TEXT              = "#E0E0E0"
 # ─────────────────────────────────────────────────────────────
 
 
@@ -43,6 +45,7 @@ class StreamToLog:
     def flush(self):
         pass
 
+
 class App:
     def __init__(self, root):
         self.root = root
@@ -52,21 +55,26 @@ class App:
         self.root.resizable(True, True)
 
         self.log_visible = False
+        self._bar_current = 0
+        self._bar_total = 1
+        self._bar_color = BUTTON_PRIMARY_BG
 
         self._configure_grid()
         self._set_icon()
         self._build_ui()
 
     def _set_icon(self):
+        try:
             icon = tk.PhotoImage(file="icon.png")
             self.root.iconphoto(True, icon)
+        except Exception:
+            pass
 
     # ─────────────────────────────────────────────────────────
     # Window Grid
     # ─────────────────────────────────────────────────────────
     def _configure_grid(self):
         self.root.columnconfigure(0, weight=1)
-
         for i in range(6):
             self.root.rowconfigure(i, weight=0)
         self.root.rowconfigure(6, weight=1)
@@ -81,7 +89,7 @@ class App:
     # ─────────────────────────────────────────────────────────
     # Rounded panel helper
     # ─────────────────────────────────────────────────────────
-    def rounded_panel(self, parent, radius=12):
+    def rounded_panel(self, parent):
         frame = tk.Frame(
             parent,
             bg=PANEL_BG,
@@ -98,26 +106,20 @@ class App:
     def _build_ui(self):
 
         # Title
-        title = tk.Label(
-            self.root,
-            text="DePDF",
+        tk.Label(
+            self.root, text="DePDF",
             font=("Helvetica", 20, "bold"),
-            bg=WINDOW_BG,
-            fg=TEXT_PRIMARY
-        )
-        title.grid(row=0, column=0, pady=(18, 2))
+            bg=WINDOW_BG, fg=TEXT_PRIMARY
+        ).grid(row=0, column=0, pady=(18, 2))
 
-        subtitle = tk.Label(
-            self.root,
-            text="Convert complex PDFs to clean plain text",
+        tk.Label(
+            self.root, text="Convert complex PDFs to clean plain text",
             font=("Helvetica", 11),
-            bg=WINDOW_BG,
-            fg=TEXT_SECONDARY
-        )
-        subtitle.grid(row=1, column=0, pady=(0, 14))
+            bg=WINDOW_BG, fg=TEXT_SECONDARY
+        ).grid(row=1, column=0, pady=(0, 14))
 
         # Input Panel
-        panel = self.rounded_panel(self.root, radius=12)
+        panel = self.rounded_panel(self.root)
         panel.grid(row=2, column=0, sticky="ew", padx=20)
         panel.columnconfigure(0, weight=1)
 
@@ -126,19 +128,13 @@ class App:
                  bg=PANEL_BG, fg=TEXT_SECONDARY).grid(row=0, column=0, sticky="w", pady=(12, 0), padx=16)
 
         self.pdf_path_var = tk.StringVar()
-        entry_pdf = tk.Entry(panel, textvariable=self.pdf_path_var, bd=0, relief="flat",
-                             highlightthickness=1, highlightbackground=BUTTON_UTILITY_BORDER)
-        entry_pdf.grid(row=1, column=0, sticky="ew", padx=16, pady=4, ipady=4)
+        tk.Entry(panel, textvariable=self.pdf_path_var, bd=0, relief="flat",
+                 highlightthickness=1, highlightbackground=BUTTON_UTILITY_BORDER
+                 ).grid(row=1, column=0, sticky="ew", padx=16, pady=4, ipady=4)
 
-        btn_pdf = tk.Label(
-            panel, text="Browse",
-            bg=BUTTON_UTILITY_BG, fg=TEXT_PRIMARY,
-            bd=1, relief="solid",
-            highlightbackground=BUTTON_UTILITY_BORDER,
-            highlightthickness=1,
-            padx=12, pady=4,
-            cursor="hand2"
-        )
+        btn_pdf = tk.Label(panel, text="Browse", bg=BUTTON_UTILITY_BG, fg=TEXT_PRIMARY,
+                           bd=1, relief="solid", highlightbackground=BUTTON_UTILITY_BORDER,
+                           highlightthickness=1, padx=12, pady=4, cursor="hand2")
         btn_pdf.grid(row=1, column=1, padx=(6, 16))
         btn_pdf.bind("<Button-1>", lambda e: self._browse_pdf())
         self.add_hover(btn_pdf, BUTTON_UTILITY_BG, BUTTON_UTILITY_HOVER)
@@ -148,19 +144,13 @@ class App:
                  bg=PANEL_BG, fg=TEXT_SECONDARY).grid(row=2, column=0, sticky="w", pady=(10, 0), padx=16)
 
         self.output_path_var = tk.StringVar()
-        entry_out = tk.Entry(panel, textvariable=self.output_path_var, bd=0, relief="flat",
-                             highlightthickness=1, highlightbackground=BUTTON_UTILITY_BORDER)
-        entry_out.grid(row=3, column=0, sticky="ew", padx=16, pady=4, ipady=4)
+        tk.Entry(panel, textvariable=self.output_path_var, bd=0, relief="flat",
+                 highlightthickness=1, highlightbackground=BUTTON_UTILITY_BORDER
+                 ).grid(row=3, column=0, sticky="ew", padx=16, pady=4, ipady=4)
 
-        btn_out = tk.Label(
-            panel, text="Browse",
-            bg=BUTTON_UTILITY_BG, fg=TEXT_PRIMARY,
-            bd=1, relief="solid",
-            highlightbackground=BUTTON_UTILITY_BORDER,
-            highlightthickness=1,
-            padx=12, pady=4,
-            cursor="hand2"
-        )
+        btn_out = tk.Label(panel, text="Browse", bg=BUTTON_UTILITY_BG, fg=TEXT_PRIMARY,
+                           bd=1, relief="solid", highlightbackground=BUTTON_UTILITY_BORDER,
+                           highlightthickness=1, padx=12, pady=4, cursor="hand2")
         btn_out.grid(row=3, column=1, padx=(6, 16))
         btn_out.bind("<Button-1>", lambda e: self._browse_output())
         self.add_hover(btn_out, BUTTON_UTILITY_BG, BUTTON_UTILITY_HOVER)
@@ -170,26 +160,22 @@ class App:
                  bg=PANEL_BG, fg=TEXT_SECONDARY).grid(row=4, column=0, sticky="w", pady=(10, 0), padx=16)
 
         self.model_var = tk.StringVar(value=DEFAULT_MODEL)
-        combo = ttk.Combobox(panel, textvariable=self.model_var, values=MODELS, state="readonly")
-        combo.grid(row=5, column=0, sticky="w", padx=16, pady=4)
+        ttk.Combobox(panel, textvariable=self.model_var, values=MODELS, state="readonly"
+                     ).grid(row=5, column=0, sticky="w", padx=16, pady=(4, 12))
 
         # Run Button
         self.run_button = tk.Label(
-            self.root,
-            text="Run",
-            bg=BUTTON_PRIMARY_BG,
-            fg="white",
+            self.root, text="Run",
+            bg=BUTTON_PRIMARY_BG, fg="white",
             font=("Helvetica", 13, "bold"),
-            padx=24,
-            pady=10,
-            cursor="hand2"
+            padx=24, pady=10, cursor="hand2"
         )
         self.run_button.grid(row=3, column=0, pady=16)
         self.run_button.bind("<Button-1>", lambda e: self._run())
         self.add_hover(self.run_button, BUTTON_PRIMARY_BG, BUTTON_PRIMARY_HOVER)
 
         # Progress Panel
-        progress_panel = self.rounded_panel(self.root, radius=12)
+        progress_panel = self.rounded_panel(self.root)
         progress_panel.grid(row=4, column=0, sticky="ew", padx=20, pady=(0, 6))
         progress_panel.columnconfigure(0, weight=1)
 
@@ -199,40 +185,47 @@ class App:
         )
         self.progress_label.grid(row=0, column=0, sticky="w", padx=16, pady=(12, 0))
 
-        self.progress = ttk.Progressbar(progress_panel, mode="determinate")
-        self.progress.grid(row=1, column=0, sticky="ew", padx=16, pady=(4, 12))
+        # Canvas-based progress bar (reliable color control on macOS)
+        self.progress_canvas = tk.Canvas(
+            progress_panel, height=10, bg=SEPARATOR, highlightthickness=0
+        )
+        self.progress_canvas.grid(row=1, column=0, sticky="ew", padx=16, pady=(4, 12))
+        self.progress_canvas.bind("<Configure>", lambda e: self._redraw_bar())
 
         # Log Toggle
         self.log_toggle = tk.Label(
-            self.root,
-            text="▶ Show Log",
-            font=("Helvetica", 10),
-            bg=WINDOW_BG,
-            fg=TEXT_SECONDARY,
-            cursor="hand2"
+            self.root, text="▶ Show Log",
+            font=("Helvetica", 10), bg=WINDOW_BG, fg=TEXT_SECONDARY, cursor="hand2"
         )
         self.log_toggle.grid(row=5, column=0, sticky="w", padx=20)
         self.log_toggle.bind("<Button-1>", lambda e: self._toggle_log())
 
-        # Log Panel (starts hidden)
+        # Log Panel (hidden by default)
         self.log_frame = tk.Frame(self.root, bg=PANEL_BG)
         self.log_frame.grid(row=6, column=0, sticky="nsew", padx=20, pady=(0, 20))
         self.log_frame.grid_remove()
-
         self.log_frame.rowconfigure(0, weight=1)
         self.log_frame.columnconfigure(0, weight=1)
 
         self.log = scrolledtext.ScrolledText(
-            self.log_frame,
-            state="disabled",
-            wrap="word",
-            font=("Courier", 10),
-            bg=LOG_BG,
-            fg=LOG_TEXT,
-            insertbackground=LOG_TEXT,
-            relief="flat"
+            self.log_frame, state="disabled", wrap="word",
+            font=("Courier", 10), bg=LOG_BG, fg=LOG_TEXT,
+            insertbackground=LOG_TEXT, relief="flat"
         )
         self.log.grid(row=0, column=0, sticky="nsew", padx=16, pady=16)
+
+    # ─────────────────────────────────────────────────────────
+    # Canvas Progress Bar
+    # ─────────────────────────────────────────────────────────
+    def _redraw_bar(self):
+        self.progress_canvas.delete("all")
+        w = self.progress_canvas.winfo_width()
+        h = self.progress_canvas.winfo_height()
+        filled = int(w * self._bar_current / max(self._bar_total, 1))
+        if filled > 0:
+            self.progress_canvas.create_rectangle(
+                0, 0, filled, h, fill=self._bar_color, outline=""
+            )
 
     # ─────────────────────────────────────────────────────────
     # Show / Hide Log
@@ -254,13 +247,11 @@ class App:
         path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf")])
         if path:
             self.pdf_path_var.set(path)
-            base = os.path.splitext(path)[0]
-            self.output_path_var.set(f"{base}_extracted.txt")
+            self.output_path_var.set(f"{os.path.splitext(path)[0]}_extracted.txt")
 
     def _browse_output(self):
         path = filedialog.asksaveasfilename(
-            defaultextension=".txt",
-            filetypes=[("Text files", "*.txt")]
+            defaultextension=".txt", filetypes=[("Text files", "*.txt")]
         )
         if path:
             self.output_path_var.set(path)
@@ -284,9 +275,17 @@ class App:
         self.root.after(0, self._set_progress_main_thread, current, total)
 
     def _set_progress_main_thread(self, current: int, total: int):
-        self.progress["maximum"] = total
-        self.progress["value"] = current
+        self._bar_current = current
+        self._bar_total = total
+        self._bar_color = BUTTON_PRIMARY_BG
         self.progress_label.config(text=f"Processing page {current} of {total}…")
+        self._redraw_bar()
+
+    def _finish_bar(self, result: str):
+        self._bar_current = self._bar_total
+        self._bar_color = COLOR_SUCCESS
+        self._redraw_bar()
+        self.progress_label.config(text=f"✓ Done — saved to: {result}")
 
     # ─────────────────────────────────────────────────────────
     # Run Pipeline
@@ -300,7 +299,7 @@ class App:
             self._log("Error: please select a PDF file.")
             return
 
-        self.run_button.configure(bg=BUTTON_PRIMARY_ACTIVE)
+        self.run_button.configure(bg=BUTTON_PRIMARY_ACTIVE, text="Running…")
         self.run_button.unbind("<Button-1>")
 
         threading.Thread(
@@ -322,38 +321,35 @@ class App:
             self._set_progress(0, total_pages)
 
             import src.agents.agent as agent_module
-            original_process_page = agent_module.process_page
+
+            # Detect whether the page function is public or private
+            if hasattr(agent_module, 'process_page'):
+                original_fn = agent_module.process_page
+                attr_name = 'process_page'
+            elif hasattr(agent_module, '_process_page'):
+                original_fn = agent_module._process_page
+                attr_name = '_process_page'
+            else:
+                original_fn = None
+                attr_name = None
+
             current_page = [0]
 
-            def tracked_process_page(image_path, model):
-                current_page[0] += 1
-                self._set_progress(current_page[0], total_pages)
+            if attr_name:
+                def tracked_process_page(image_path, model):
+                    current_page[0] += 1
+                    self._set_progress(current_page[0], total_pages)
+                    return original_fn(image_path, model)
 
-                result = original_process_page(image_path, model)
-                return result
-
-            agent_module.process_page = tracked_process_page
+                setattr(agent_module, attr_name, tracked_process_page)
 
             result = run(pdf_path=pdf_path, output_path=output_path, model=model)
 
-            agent_module.process_page = original_process_page
+            if attr_name:
+                setattr(agent_module, attr_name, original_fn)
 
             self._log(f"Done. Saved to: {result}")
-
-            # GUI success message
-            self.root.after(0, lambda: self.progress_label.config(
-                text=f"Done! Saved to:\n{result}"
-            ))
-
-            # Fill bar
-            self.root.after(0, lambda: self.progress.config(
-                value=self.progress["maximum"]
-            ))
-
-            # Turn bar green
-            self.root.after(0, lambda: self.progress.config(
-                style="Green.Horizontal.TProgressbar"
-            ))
+            self.root.after(0, self._finish_bar, result)
 
         except Exception as e:
             self._log(f"Error: {e}")
@@ -363,17 +359,17 @@ class App:
             self.root.after(0, self._reset_button)
 
     def _reset_button(self):
-        self.run_button.configure(bg=BUTTON_PRIMARY_BG)
+        self.run_button.configure(bg=BUTTON_PRIMARY_BG, text="Run")
         self.run_button.bind("<Button-1>", lambda e: self._run())
+        self.add_hover(self.run_button, BUTTON_PRIMARY_BG, BUTTON_PRIMARY_HOVER)
 
 
-# ─────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────
 # Main
-# ─────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     root = tk.Tk()
 
-    # ttk style fix for macOS look
     style = ttk.Style()
     style.theme_use("default")
 
@@ -391,21 +387,6 @@ if __name__ == "__main__":
               focusfill=[("readonly", PANEL_BG)],
               fieldbackground=[("readonly", PANEL_BG)],
               bordercolor=[("focus", BUTTON_UTILITY_BORDER)])
-
-    style.configure("TProgressbar",
-                    troughcolor=PANEL_BG,
-                    background=BUTTON_PRIMARY_BG,
-                    bordercolor=PANEL_BG,
-                    lightcolor=BUTTON_PRIMARY_BG,
-                    darkcolor=BUTTON_PRIMARY_BG)
-
-    # Green success bar
-    style.configure("Green.Horizontal.TProgressbar",
-                    troughcolor=PANEL_BG,
-                    background="#34C759",
-                    lightcolor="#34C759",
-                    darkcolor="#34C759",
-                    bordercolor=PANEL_BG)
 
     app = App(root)
     root.mainloop()

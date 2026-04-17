@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog, scrolledtext, ttk
 import threading
+import subprocess
 import sys
 import os
 
@@ -9,7 +10,7 @@ from src.tools.vlm import DEFAULT_MODEL, MODELS
 
 
 # ─────────────────────────────────────────────────────────────
-# macOS Big Sur Color Palette
+# Color Palette
 # ─────────────────────────────────────────────────────────────
 WINDOW_BG             = "#ECECEC"
 PANEL_BG              = "#FFFFFF"
@@ -49,8 +50,8 @@ class StreamToLog:
 class App:
     def __init__(self, root):
         self.root = root
-        self.root.title("DePDF")
-        self.root.geometry("720x520")
+        self.root.title("PlainText")
+        self.root.geometry("720x560")
         self.root.configure(bg=WINDOW_BG)
         self.root.resizable(True, True)
 
@@ -58,6 +59,7 @@ class App:
         self._bar_current = 0
         self._bar_total = 1
         self._bar_color = BUTTON_PRIMARY_BG
+        self.open_button = None
 
         self._configure_grid()
         self._set_icon()
@@ -72,12 +74,20 @@ class App:
 
     # ─────────────────────────────────────────────────────────
     # Window Grid
+    # row 0: title
+    # row 1: subtitle
+    # row 2: input panel
+    # row 3: run button
+    # row 4: open button (hidden until done)
+    # row 5: progress panel
+    # row 6: log toggle
+    # row 7: log panel
     # ─────────────────────────────────────────────────────────
     def _configure_grid(self):
         self.root.columnconfigure(0, weight=1)
-        for i in range(6):
+        for i in range(8):
             self.root.rowconfigure(i, weight=0)
-        self.root.rowconfigure(6, weight=1)
+        self.root.rowconfigure(7, weight=1)
 
     # ─────────────────────────────────────────────────────────
     # Hover helper
@@ -107,13 +117,13 @@ class App:
 
         # Title
         tk.Label(
-            self.root, text="DePDF",
+            self.root, text="PlainText",
             font=("Helvetica", 20, "bold"),
             bg=WINDOW_BG, fg=TEXT_PRIMARY
         ).grid(row=0, column=0, pady=(18, 2))
 
         tk.Label(
-            self.root, text="Convert complex PDFs to clean plain text",
+            self.root, text="Convert complex documents to clean plain text",
             font=("Helvetica", 11),
             bg=WINDOW_BG, fg=TEXT_SECONDARY
         ).grid(row=1, column=0, pady=(0, 14))
@@ -123,8 +133,8 @@ class App:
         panel.grid(row=2, column=0, sticky="ew", padx=20)
         panel.columnconfigure(0, weight=1)
 
-        # PDF selection
-        tk.Label(panel, text="PDF File", font=("Helvetica", 10, "bold"),
+        # File selection
+        tk.Label(panel, text="File", font=("Helvetica", 10, "bold"),
                  bg=PANEL_BG, fg=TEXT_SECONDARY).grid(row=0, column=0, sticky="w", pady=(12, 0), padx=16)
 
         self.pdf_path_var = tk.StringVar()
@@ -163,20 +173,24 @@ class App:
         ttk.Combobox(panel, textvariable=self.model_var, values=MODELS, state="readonly"
                      ).grid(row=5, column=0, sticky="w", padx=16, pady=(4, 12))
 
-        # Run Button
+        # Run Button (row 3)
         self.run_button = tk.Label(
             self.root, text="Run",
             bg=BUTTON_PRIMARY_BG, fg="white",
             font=("Helvetica", 13, "bold"),
             padx=24, pady=10, cursor="hand2"
         )
-        self.run_button.grid(row=3, column=0, pady=16)
+        self.run_button.grid(row=3, column=0, pady=(16, 4))
         self.run_button.bind("<Button-1>", lambda e: self._run())
         self.add_hover(self.run_button, BUTTON_PRIMARY_BG, BUTTON_PRIMARY_HOVER)
 
-        # Progress Panel
+        # Open button placeholder (row 4) — empty label keeps row height stable
+        self.open_button_placeholder = tk.Label(self.root, text="", bg=WINDOW_BG, height=1)
+        self.open_button_placeholder.grid(row=4, column=0)
+
+        # Progress Panel (row 5)
         progress_panel = self.rounded_panel(self.root)
-        progress_panel.grid(row=4, column=0, sticky="ew", padx=20, pady=(0, 6))
+        progress_panel.grid(row=5, column=0, sticky="ew", padx=20, pady=(0, 6))
         progress_panel.columnconfigure(0, weight=1)
 
         self.progress_label = tk.Label(
@@ -185,24 +199,23 @@ class App:
         )
         self.progress_label.grid(row=0, column=0, sticky="w", padx=16, pady=(12, 0))
 
-        # Canvas-based progress bar (reliable color control on macOS)
         self.progress_canvas = tk.Canvas(
             progress_panel, height=10, bg=SEPARATOR, highlightthickness=0
         )
         self.progress_canvas.grid(row=1, column=0, sticky="ew", padx=16, pady=(4, 12))
         self.progress_canvas.bind("<Configure>", lambda e: self._redraw_bar())
 
-        # Log Toggle
+        # Log Toggle (row 6)
         self.log_toggle = tk.Label(
             self.root, text="▶ Show Log",
             font=("Helvetica", 10), bg=WINDOW_BG, fg=TEXT_SECONDARY, cursor="hand2"
         )
-        self.log_toggle.grid(row=5, column=0, sticky="w", padx=20)
+        self.log_toggle.grid(row=6, column=0, sticky="w", padx=20)
         self.log_toggle.bind("<Button-1>", lambda e: self._toggle_log())
 
-        # Log Panel (hidden by default)
+        # Log Panel (row 7, hidden by default)
         self.log_frame = tk.Frame(self.root, bg=PANEL_BG)
-        self.log_frame.grid(row=6, column=0, sticky="nsew", padx=20, pady=(0, 20))
+        self.log_frame.grid(row=7, column=0, sticky="nsew", padx=20, pady=(0, 20))
         self.log_frame.grid_remove()
         self.log_frame.rowconfigure(0, weight=1)
         self.log_frame.columnconfigure(0, weight=1)
@@ -235,7 +248,9 @@ class App:
             self.log_frame.grid_remove()
             self.log_toggle.config(text="▶ Show Log")
             self.log_visible = False
+            self.root.geometry(self._collapsed_size)
         else:
+            self._collapsed_size = self.root.geometry()  # save current size
             self.log_frame.grid()
             self.log_toggle.config(text="▼ Hide Log")
             self.log_visible = True
@@ -244,7 +259,12 @@ class App:
     # File Browsing
     # ─────────────────────────────────────────────────────────
     def _browse_pdf(self):
-        path = filedialog.askopenfilename(filetypes=[("PDF files", "*.pdf")])
+        path = filedialog.askopenfilename(filetypes=[
+            ("All supported files", "*.pdf *.png *.jpg *.jpeg *.tiff *.tif *.bmp *.webp"),
+            ("PDF files", "*.pdf"),
+            ("Image files", "*.png *.jpg *.jpeg *.tiff *.tif *.bmp *.webp"),
+            ("All files", "*.*")
+        ])
         if path:
             self.pdf_path_var.set(path)
             self.output_path_var.set(f"{os.path.splitext(path)[0]}_extracted.txt")
@@ -286,6 +306,26 @@ class App:
         self._bar_color = COLOR_SUCCESS
         self._redraw_bar()
         self.progress_label.config(text=f"✓ Done — saved to: {result}")
+        self._show_open_button(result)
+
+    # ─────────────────────────────────────────────────────────
+    # Open File Button
+    # ─────────────────────────────────────────────────────────
+    def _show_open_button(self, path: str):
+        if self.open_button is not None:
+            self.open_button.destroy()
+        self.open_button = tk.Label(
+            self.root, text="Open Extracted Text File",
+            bg=COLOR_SUCCESS, fg="white",
+            font=("Helvetica", 11, "bold"),
+            padx=20, pady=8, cursor="hand2"
+        )
+        self.open_button.grid(row=4, column=0, pady=(0, 4))
+        self.open_button.bind("<Button-1>", lambda e: self._open_file(path))
+        self.add_hover(self.open_button, COLOR_SUCCESS, "#2DB84D")
+
+    def _open_file(self, path: str):
+        subprocess.run(["open", path])
 
     # ─────────────────────────────────────────────────────────
     # Run Pipeline
@@ -296,8 +336,13 @@ class App:
         model = self.model_var.get()
 
         if not pdf_path:
-            self._log("Error: please select a PDF file.")
+            self._log("Error: please select a file.")
             return
+
+        # Hide open button if visible from previous run
+        if self.open_button is not None:
+            self.open_button.destroy()
+            self.open_button = None
 
         self.run_button.configure(bg=BUTTON_PRIMARY_ACTIVE, text="Running…")
         self.run_button.unbind("<Button-1>")
@@ -317,12 +362,14 @@ class App:
 
         try:
             from src.tools.pdf import get_page_count
-            total_pages = get_page_count(pdf_path)
+            if pdf_path.lower().endswith('.pdf'):
+                total_pages = get_page_count(pdf_path)
+            else:
+                total_pages = 1
             self._set_progress(0, total_pages)
 
             import src.agents.agent as agent_module
 
-            # Detect whether the page function is public or private
             if hasattr(agent_module, 'process_page'):
                 original_fn = agent_module.process_page
                 attr_name = 'process_page'

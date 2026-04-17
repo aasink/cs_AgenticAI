@@ -7,10 +7,13 @@ MODELS = [
     "llama3.2-vision",
     "qwen3-vl:2b",
     "qwen3-vl:4b",
-    "qwen3-vl:8b"
+    "qwen2.5vl:7b",
+    "gemma4:e2b",
+    "gemma4:e4b",
+    "minicpm-v:8b"
 ]
 
-DEFAULT_MODEL = "qwen3-vl:2b"
+DEFAULT_MODEL = "gemma4:e4b"
 
 def list_models() -> list[str]:
     """Return the list of available VLM models."""

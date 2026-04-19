@@ -7,7 +7,7 @@
 ---
 
 # Presentation
-▶️ [Presentation](./presentation.mp4)
+▶️ [Presentation](https://drive.google.com/file/d/15HYW7VHFSZ_VGAzPvVnkaY9Tz0cHv3_h/view?usp=sharing)
 
 ---
 

@@ -1,0 +1,58 @@
+extracted_text = """
+* “The Universal Cac
+
+For Owners and Operators
+of Ford Cars and Trucks
+
+
+Foreword
+
+T is a significant fact that nearly all Ford cars are driven by
+
+_laymen—by owners, who in the great majority of cases have
+
+little or no practical experience with things mechanical.
+
+The simplicity of the Ford car and the ease with which it
+is operated renders an intimate knowledge of mechanical tech-
+
+from it, for it is a truism that the more one knows about a thing
+the more one enjoys it.
+
+The mastery of a thorough knowledge of Ford construction is
+by no means a difficult or time-consuming task. The Ford is the
+simplest car made. It is easy to understand, and is not difficult
+to keep in proper adjustment and repair.
+
+That the Ford construction may be thoroughly understood—
+and that there may be an active guide for the making of
+Ford adjustments—this book is publi
+
+Important
+
+It is most important that owners of Ford cars shalt insist
+upon getting the genuine Ford-made materials, or “Parts,”
+when having repairs or replacements made. This will be
+assured when the car is taken to the authorized Ford
+
+agent. Imitation, or “bogus” or counterfeit parts of
+quality are being made and sold as “Ford Parts.”
+their use by dealing with the authorised Ford
+agent,
+
+
+The Car and Its Operation
+
+What must be done before
+starting the Car? Answer No. 1
+
+Before trying to start the car, fill the radiator (by removing cap at top) with clean
+fresh water. If perfectly clean water cannot be obtained it is advisable to strain
+it through muslin or other similar material to prevent foreign matter from getting
+in and obstructing the small tubes of the radiator. The system will hold approximately
+three gallons. It is important that the car should not be run under its
+own power unless the water circulating system has been filled. Pour in the water
+until you are sure that both radiator and cylinder water jackets are full. The
+water will run out of the overflow pipe onto the ground when the entire water
+system has been filled.
+"""

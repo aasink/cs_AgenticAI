@@ -1,0 +1,178 @@
+extracted_text = """
+Congressional Record
+UNUM
+
+E PLURIBUS
+
+United States
+of America PROCEEDINGS AND DEBATES OF THE 119th
+
+ CONGRESS, FIRST SESSION
+
+b This symbol represents the time of day during the House proceedings, e.g., b 1407 is 2:07 p.m.
+Matter set in this typeface indicates words inserted or appended, rather than spoken, by a Member of the House on the floor.
+
+.
+
+H6135 
+
+Vol. 171 WASHINGTON, FRIDAY, JANUARY 2, 2026 No. 219 
+
+House of Representatives 
+The House met at 4 p.m. and was 
+
+called to order by the Speaker pro tem-
+pore (Mr. BRESNAHAN). 
+
+f 
+
+DESIGNATION OF THE SPEAKER 
+PRO TEMPORE 
+
+The SPEAKER pro tempore laid be-
+fore the House the following commu-
+nication from the Speaker: 
+
+WASHINGTON, DC, 
+January 2, 2026. 
+
+I hereby appoint the Honorable ROBERT P. 
+BRESNAHAN, JR. to act as Speaker pro tem-
+pore on this day. 
+
+MIKE JOHNSON, 
+Speaker of the House of Representatives. 
+
+f 
+
+PRAYER 
+
+The Reverend John Kellogg, Christ 
+Church Capitol Hill, Washington, D.C., 
+offered the following prayer: 
+
+Almighty God, we commend to Your 
+care the Members of Congress as they 
+begin this new year of service. Bless 
+and protect them, along with their 
+families and staffs. Grant them wis-
+dom, patience, and clarity of purpose 
+as they carry out the duties entrusted 
+to them. 
+
+May their work be guided by integ-
+rity, compassion, and a commitment to 
+the common good. 
+
+It is with grateful hearts that we 
+pray. 
+
+Amen. 
+
+f 
+
+THE JOURNAL 
+
+The SPEAKER pro tempore. Pursu-
+ant to clause 13 of rule I, the Journal of 
+the last day’s proceedings is approved. 
+
+f 
+
+PLEDGE OF ALLEGIANCE 
+
+The SPEAKER pro tempore. The 
+Chair will lead the House in the Pledge 
+of Allegiance. 
+
+The SPEAKER pro tempore led the 
+Pledge of Allegiance as follows: 
+
+I pledge allegiance to the Flag of the 
+United States of America, and to the Repub-
+lic for which it stands, one nation under God, 
+indivisible, with liberty and justice for all. 
+
+f 
+
+COMMUNICATION FROM THE 
+CLERK OF THE HOUSE 
+
+The SPEAKER pro tempore laid be-
+fore the House the following commu-
+nication from the Clerk of the House of 
+Representatives: 
+
+OFFICE OF THE CLERK, 
+HOUSE OF REPRESENTATIVES, 
+
+Washington, DC, December 30, 2025. 
+Hon. MIKE JOHNSON, 
+Speaker, House of Representatives, 
+Washington, DC. 
+
+DEAR MR. SPEAKER: Pursuant to the per-
+mission granted in Clause 2(h) of Rule II of 
+the Rules of the U.S. House of Representa-
+tives, I have the honor to transmit sealed en-
+velopes received from the White House on 
+December 30, 2025, at 3:17 p.m., said to con-
+tain messages from the President on his ob-
+jections to H.R. 131 and H.R. 504. 
+
+With best wishes, I am, 
+Sincerely, 
+
+KEVIN F. MCCUMBER, 
+Clerk of the House. 
+
+f 
+
+FINISH THE ARKANSAS VALLEY 
+CONDUIT ACT—VETO MESSAGE 
+FROM THE PRESIDENT OF THE 
+UNITED STATES (H. DOC. NO. 119– 
+119) 
+
+The SPEAKER pro tempore laid be-
+fore the House the following veto mes-
+sage from the President of the United 
+States: 
+
+To the House of Representatives: 
+I am returning herewith without my 
+
+approval H.R. 131, the Finish the Ar-
+kansas Valley Conduit Act. 
+
+[...continues exactly as in document...]
+
+UNUM
+E PLURIBUS
+
+D1314 January 2, 2026 
+
+Next Meeting of the SENATE 
+
+12 noon, Saturday, January 3 
+
+Senate Chamber 
+
+Program for Saturday: Senate will convene the Second 
+Session of the 119th Congress. 
+
+Next Meeting of the HOUSE OF REPRESENTATIVES 
+
+11:30 a.m., Saturday, January 3 
+
+House Chamber 
+
+Program for Saturday: House will meet in Pro Forma 
+session at 11:30 a.m. 
+
+Superintendent of Documents
+2026-01-08T02:43:45-0500
+Government Publishing Office, Washington, DC 20401
+U.S. Government Publishing Office
+Government Publishing Office attests that this document has not been altered since it was disseminated by Government Publishing Office
+"""

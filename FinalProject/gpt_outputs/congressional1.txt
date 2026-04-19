@@ -1,0 +1,67 @@
+extracted_text = """
+Congressional Record
+United States of America
+PROCEEDINGS AND DEBATES OF THE 119th CONGRESS, FIRST SESSION
+
+Vol. 171 WASHINGTON, FRIDAY, JANUARY 2, 2026 No. 219
+
+House of Representatives
+The House met at 4 p.m. and was called to order by the Speaker pro tempore (Mr. BRESNAHAN).
+
+DESIGNATION OF THE SPEAKER PRO TEMPORE
+I hereby appoint the Honorable ROBERT P. BRESNAHAN, JR. to act as Speaker pro tempore on this day.
+MIKE JOHNSON, Speaker of the House of Representatives.
+
+PRAYER
+The Reverend John Kellogg offered a prayer asking for wisdom, protection, and guidance for Members of Congress.
+
+THE JOURNAL
+The Journal of the last day’s proceedings is approved.
+
+PLEDGE OF ALLEGIANCE
+The House recited the Pledge of Allegiance.
+
+COMMUNICATION FROM THE CLERK
+The Clerk transmitted messages from the President regarding objections to H.R. 131 and H.R. 504.
+
+VETO MESSAGE – H.R. 131 (Finish the Arkansas Valley Conduit Act)
+The President returned the bill without approval, citing excessive federal costs for a local water project.
+Key points:
+- Project costs increased to $1.3 billion
+- Repayment period would be extended to 75 years
+- Federal taxpayers would bear more of the burden
+The President rejected the bill, stating it represents fiscal mismanagement.
+
+VETO MESSAGE – H.R. 504 (Miccosukee Reserved Area Amendments Act)
+The President vetoed the bill concerning infrastructure protections in the Everglades.
+Key points:
+- Area (Osceola Camp) was not authorized for occupation
+- Potential cost up to $14 million
+- Administration opposed funding projects for special interests
+The bill was returned without approval.
+
+Both veto considerations were postponed until January 8, 2026.
+
+ADJOURNMENT
+The House adjourned at 4:10 p.m. until January 3, 2026.
+
+PUBLIC BILLS INTRODUCED
+H.R. 6936 – Requires photo ID and proof of citizenship to vote in federal elections.
+H.R. 6937 – Proposes eliminating the H-1B visa program.
+
+CONSTITUTIONAL AUTHORITY STATEMENTS
+Both bills cite Article I, Section 8 of the Constitution.
+
+ADDITIONAL SPONSORS
+Various members added as cosponsors to existing bills.
+
+Senate
+The Senate met briefly at 3:00 p.m., with Senator Pete Ricketts presiding.
+He was appointed Acting President pro tempore by Senator Chuck Grassley.
+The Senate adjourned at 3:00:40 p.m. until January 3, 2026.
+
+Daily Digest Summary
+- No committee meetings were held
+- No recorded votes occurred
+- House and Senate both held brief sessions and adjourned
+"""

@@ -1,158 +1,147 @@
-# Final Project: Agentic PDF Extraction Pipeline
+# PlainText
+### An Agentic Pipeline for Local Document Text Extraction
+*CS6501 Workshop on Building AI Agents — Final Project*
+
 ---
- 
-An agentic, open-source alternative to ChatGPT Vision for processing complex PDF documents. Uses a local vision-language model and OCR to convert PDFs with multi-column layouts and tables into clean, single-column plain text — no API keys, no data leaving your machine.
- 
+
+## Presentation
+▶️ [Watch the presentation](./presentation.mp4)
+
 ---
- 
+
+PlainText is a fully local, open-source pipeline for extracting clean text from complex documents. It uses multimodal vision-language models running via Ollama to handle layouts that traditional OCR and copy-paste can't — multi-column papers, tables, forms, figures, and mixed content — with no API keys and no data leaving your machine.
+
+---
+
 ## Table of Contents
- 
 - [The Problem](#the-problem)
 - [How It Works](#how-it-works)
 - [Setup](#setup)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
-- [Benchmarking](#benchmarking)
-- [Roadmap](#roadmap)
- 
+
 ---
- 
+
 ## The Problem
- 
-PDFs with complex layouts — multiple columns, embedded tables — get garbled when you extract text normally. ChatGPT Vision handles these okay, but you can't call it via API.DePDF replicates that capability using entirely open-source, locally running tools.
- 
-DePDF is particularly useful as a preprocessing step for RAG pipelines, where garbled table extraction breaks question answering over document contents.
- 
+
+Documents come in all shapes — scanned pages, multi-column layouts, tables, forms, and handwriting. The variety of layouts makes accurate text extraction genuinely difficult.
+
+**Traditional OCR** has no understanding of layout. Copy-paste a two-column paper and you get scrambled, unusable output.
+
+**ChatGPT** limits free tier users to ~4 file uploads, requires a paid subscription beyond that, and sends your documents to OpenAI's servers.
+
+**Cloud OCR APIs** (AWS Textract, Google Document AI) have a limited free tier that expires after 3 months, costs that scale quickly with volume and complexity, and the same privacy problem — your data leaves your machine.
+
+PlainText solves all three: it runs entirely locally, handles complex layouts, and is completely free.
+
 ---
- 
+
 ## How It Works
- 
-DePDF runs an agent loop over each page of a PDF:
- 
-1. **Analyze** — the agent looks at the page visually and classifies its layout
-2. **Execute** — based on the classification, the agent picks the right extraction strategy
-3. **Verify** — the agent checks its own output and retries if something looks wrong
- 
+
+PlainText runs an agentic loop over each page of a document:
+
+1. **Document Parser** — splits the document into individual page images
+2. **Analyzer** — classifies the page layout type
+3. **Executor** — applies the right extraction strategy based on the classification
+4. **Verifier** — checks the output for completeness and hallucinations, retries if needed
+5. **Output** — assembles all pages into a clean plain text file
+
 Layout types handled:
- 
+
 | Layout | Strategy |
 |--------|----------|
-| Single column text | OCR, fall back to VLM if OCR fails verification |
-| Multi-column text | VLM reorders columns into single column |
-| Tables | VLM reconstructs rows, one per line |
-| Mixed | VLM handles columns and tables together |
-| Figures | VLM generates a brief description |
- 
+| Single column | Direct extraction |
+| Multi-column | Reorders columns into single column |
+| Table | Reconstructs rows, one per line, pipe-separated |
+| Figure | Generates a brief description |
+| Mixed | Handles columns and tables together |
+| Empty | Skipped |
+
 ---
 
 ## Setup
- 
+
 ### Prerequisites
- 
-- Install Tesseract OCR: https://github.com/tesseract-ocr/tesseract
-- Install Ollama: https://ollama.com
- 
-Then pull the desired vision model:
+- Install [Ollama](https://ollama.com)
+
+Pull a vision-language model:
 ```bash
-ollama pull [MODEL]
-ollama pull qwen3-vl:2b         # (Recommended)
-ollama pull qwen3-vl:4b
-ollama pull qwen3-vl:8b
-ollama pull llava
-ollama pull granite3.2-vision
+ollama pull gemma4           # Recommended — best quality
 ollama pull llama3.2-vision
+ollama pull qwen2.5vl:7b
+ollama pull granite3.2-vision
+ollama pull moondream
 ```
 
-If running a model not listed above, add model designator to MODELS in [src/tools/vlm.py](./src/tools/vlm.py)
- 
+To use a model not listed above, add its name to `MODELS` in [src/tools/vlm.py](./src/tools/vlm.py).
+
 ### Install Python Dependencies
- 
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
- 
+
 ## Usage
 
-### Ollama Sever
-
+Make sure Ollama is running first — either via the desktop app or:
 ```bash
 ollama serve
 ```
 
-In one terminal start the Ollama server. In another terminal run the GUI command or the CLI command
- 
 ### GUI
- 
 ```bash
 python app.py
 ```
- 
-Upload a PDF, choose an output path and model, and click Run. Progress is shown page by page in the log.
- 
+Select a document (PDF or image), choose an output path and model, and click Run. The progress bar tracks each page. When complete, click **Open Extracted Text File** to view the result.
+
 ### Command Line
- 
 ```bash
 python app-cli.py path/to/document.pdf
 ```
- 
+
 With options:
 ```bash
 # custom output path
-python app-cli.py document.pdf --output clean.txt path/to/document.pdf
- 
+python app-cli.py document.pdf --output clean.txt
+
 # different model
-python app-cli.py document.pdf --model qwen3-vl:2b path/to/document.pdf
+python app-cli.py document.pdf --model gemma4
 ```
- 
+
+Supported input formats: `.pdf`, `.png`, `.jpg`, `.jpeg`, `.tiff`, `.tif`, `.bmp`, `.webp`
+
 ---
- 
+
 ## Project Structure
- 
 ```
-project/
+PlainText/
 │
-├── app.py                      # Tkinter GUI
-├── app-cli.py                 # CLI entry point
+├── app.py                      # Desktop GUI
+├── app-cli.py                  # CLI entry point
 ├── requirements.txt
 ├── README.md
+├── presentation.mp4
 │
 ├── src/
-│   ├── agent/
-│   │   ├── agent.py            # orchestrates the full agent loop
-│   │   ├── analyzer.py         # classifies each page layout
-│   │   ├── executor.py         # carries out the agent's plan using tools
-│   │   ├── verifier.py         # checks output, triggers retry if needed
-│   │   ├── prompts.py          # prompts that guide the agent
-│   │   └── output.py           # stitches pages and saves final text
+│   ├── agents/
+│   │   ├── agent.py            # Orchestrates the full pipeline
+│   │   ├── analyzer.py         # Classifies each page layout
+│   │   ├── executor.py         # Applies extraction strategy
+│   │   ├── verifier.py         # Checks output, triggers retry if needed
+│   │   ├── prompts.py          # Prompts for each pipeline stage
+│   │   └── output.py           # Stitches pages and saves final text
 │   │
 │   └── tools/
-│       ├── vlm.py              # Ollama VLM calls
-│       ├── ocr.py              # Tesseract OCR
-│       └── pdf.py              # PDF splitting, embedded text extraction
+│       ├── vlm.py              # Ollama model calls
+│       └── pdf.py              # PDF splitting and page rendering
 │
-├── test/                       # sample PDFs for testing
-│   ├──
-│   ├──
-│   ├──
-│   └── 
-│
-└── benchmark/
-    ├── benchmark.py            # runs pipeline on test docs, scores results
-    └── results/                # saved benchmark outputs
+└── test/                       # Sample documents for testing
 ```
- 
+
 ---
- 
-## Benchmarking
- 
-Run the benchmark suite to compare output quality against GPT-5 Vision:
- 
-```bash
-python benchmark/benchmark.py
-```
- 
-Results are saved to `benchmark/results/`.
- 
---- 
+
+## Notes
+- Ollama must be running before launching PlainText. Start it with `ollama serve` or via the Ollama desktop app.
+- Larger models produce better results but are slower. `gemma4` is recommended for the best quality/speed balance on Apple Silicon.
+- For best results on low quality scans, consider pre-processing images to boost contrast before running.

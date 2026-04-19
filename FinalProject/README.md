@@ -1,13 +1,13 @@
+
+
 # PlainText
 ### An Agentic Pipeline for Local Document Text Extraction
 *CS6501 Workshop on Building AI Agents — Final Project*
 
 ---
 
-
-
-## Presentation
-▶️ [Watch the presentation](./presentation.mp4)
+# Presentation
+▶️ [Presentation](./presentation.mp4)
 
 ---
 
